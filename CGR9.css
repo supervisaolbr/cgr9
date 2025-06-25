@@ -1,0 +1,478 @@
+    :root {
+      --escala: 1;
+    }
+   .switch {
+      position: relative;
+      width: 80px;
+      height: 40px;
+      background-color: #ccc;
+      border-radius: 19px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+      box-sizing: border-box;
+      font-family: Arial, Helvetica, sans-serif;
+      margin: 0 auto;
+    }
+    .conserva {
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 16px;
+      margin: 0 auto;
+    }
+    .switch:hover {
+      background-color: #a8a8a8;
+    }
+
+    .switch.on {
+      background-color: #5ed362;
+    }
+    .switch.on:hover {
+      background-color: #58c45c;
+    }
+
+    .toggle-circle {
+      width: 30px;
+      height: 30px;
+      background-color: white;
+      border-radius: 50%;
+      position: absolute;
+      top: 5px;
+      left: 7px;
+      transition: left 0.3s;
+      z-index: 2;
+    }
+
+    .switch.on .toggle-circle {
+      left: 42px;
+    }
+
+    .switch-labels {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 10px;
+      box-sizing: border-box;
+      font-size: 14px;
+      color: white;
+      font-weight: bold;
+      pointer-events: none;
+      z-index: 1;
+    }
+    .imagemcgrdiv img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover; /* Faz com que a imagem seja redimensionada sem distorções, cortando se necessário */
+    }
+    .imagemcgrdiv {
+    display: flex;
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center; /* Centraliza verticalmente */
+    height: 100vh; 
+    }
+    .escolha {
+      padding-top: 8px;
+      padding-bottom: 8px;
+      padding-right: 4px;
+      background-color: lightgray;
+      margin: 0 auto;
+      border-radius: 20px;
+      width: 620px;
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 35px;
+      animation: inicio 0.8s ease-in-out forwards;
+      position: relative;
+      z-index: 4;
+    }
+
+    .coord {
+      text-decoration: none;
+      cursor: pointer;
+      color: black;
+      transition: color 0.5s ease-in-out;
+    }
+    .coord:hover {
+      color: blue;
+    }
+
+    .conservaEspecial {
+      display: none;
+      align-items: center;
+      justify-content: center;
+      position: absolute;
+      margin: 0 auto;
+      gap: 15px;
+      top: 81px;
+      left: 33.5vw;
+      animation: inicio1 0.8s ease-in-out forwards;
+    }
+
+    .conservaEspecial.t1 {
+      display: flex;
+    }
+
+    .rcs {
+      padding-top: 8px;
+      padding-bottom: 8px;
+      padding-right: 4px;
+      background-color: lightgray;
+      margin: 0 auto;
+      border-radius: 20px;
+      width: 216px;
+      position: relative;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      min-height: 20px;
+      animation: inicio1 0.8s ease-in-out forwards;
+      left: 202px;
+      top: 20px;
+      z-index: 3;
+    }
+
+    .opt2 {
+      padding-left: 10px;
+      padding-right: 10px;
+      display: inline-block;
+    }
+
+    .fa-search {
+      font-size: 16px;
+      color: black;
+      cursor: pointer;
+      width: 35px;
+      height: 35px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: background-color 500ms ease-in;
+      color: black;
+      background-color: white;
+    }
+    
+    .fa-search.clicado {
+      background-color: gray;
+      color: white;
+    }
+
+    .fa-search:hover {
+      color: white;
+      background-color: black;
+    }
+
+    .search-box {
+      display: none;
+      margin-left: 10px;
+      padding: 5px 10px;
+      border: none;
+      font-size: 20px;
+      margin: 0 auto;
+      box-sizing: border-box;
+      flex: none;
+      opacity: 0;
+      width: 0;
+      transition: opacity 500ms ease-in;
+      animation: widthCrescer 1s ease-in-out forwards;
+    }
+
+    .search-box:focus {
+      outline: none;
+      opacity: 1;
+    }
+
+    .opt1 {
+      padding-left: 4px;
+      padding-right: 4px;
+      width: 180px;
+      display: inline-block;
+    }
+
+    .opt1 button {
+      color: black;
+      font-weight: bold;
+      border: none;
+      border-radius: 15px;
+      padding: 10px 0;
+      background-color: white;
+      width: 100%;
+      transition: background-color 500ms ease-in;
+    }
+
+    .opt1 button:hover {
+      color: white;
+      background-color: black;
+    }
+
+      .opt3 {
+      padding-left: 4px;
+      padding-right: 4px;
+      width: 40px;
+      display: inline-block;
+    }
+
+    .opt3 button {
+      color: black;
+      font-weight: bold;
+      border: none;
+      border-radius: 15px;
+      padding: 10px 0;
+      background-color: white;
+      width: 100%;
+      transition: background-color 500ms ease-in;
+      font-size: 10px;
+    }
+
+    .opt3 button:hover {
+      color: white;
+      background-color: black;
+    }
+
+    #btn1,
+    #btn2,
+    #btn3 {
+      cursor: pointer;
+    }
+
+    #btn1.t1,
+    #btn2.t1,
+    #btn3.t1 {
+      color: white;
+      background-color: gray;
+    }
+
+    #btn1.t1:hover,
+    #btn2.t1:hover,
+    #btn3.t1:hover {
+      background-color: black;
+    }
+
+    #rc1.t1,
+    #rc2.t1,
+    #rc3.t1,
+    #rc4.t1,
+    #rc5.t1 {
+      color: white;
+      background-color: gray;
+    }
+
+    #rc1,
+    #rc2,
+    #rc3,
+    #rc4,
+    #rc5 {
+      cursor: pointer;
+    }
+
+    #rc1.t1:hover,
+    #rc2.t1:hover,
+    #rc3.t1:hover,
+    #rc4.t1:hover,
+    #rc5.t1:hover {
+      background-color: black;
+    }
+
+    #tabelaDados,
+    #tabelaDados1,
+    #tabelaDados2,
+    #tabelaDados3,
+    #tabelaDados4,
+    #tabelaDados5 {
+      width: 1728px;
+      border-collapse: collapse;
+      font-family: Arial, sans-serif;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      z-index: -2;
+      position: absolute;
+      animation: deslizar 0.8s ease-in-out forwards;
+    }
+
+    #tabelaDados1.t2,
+    #tabelaDados2.t2,
+    #tabelaDados3.t2,
+    #tabelaDados4.t2,
+    #tabelaDados5.t2 {
+      animation: deslizar1 0.8s ease-in-out forwards;
+    }
+
+    .tabelaRelative {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      top: 40px;
+      transform: scale(var(--escala));
+    }
+
+    #tabelaDados th, #tabelaDados td,
+    #tabelaDados1 th, #tabelaDados1 td,
+    #tabelaDados2 th, #tabelaDados2 td,
+    #tabelaDados3 th, #tabelaDados3 td,
+    #tabelaDados4 th, #tabelaDados4 td,
+    #tabelaDados5 th, #tabelaDados5 td {
+      border: 1px solid black;
+      padding: 8px;
+      text-align: center;
+      vertical-align: middle;
+    }
+
+    #tabelaDados .titulo-principal, 
+    #tabelaDados1 .titulo-principal, 
+    #tabelaDados2 .titulo-principal, 
+    #tabelaDados3 .titulo-principal, 
+    #tabelaDados4 .titulo-principal, 
+    #tabelaDados5 .titulo-principal {
+      font-size: 20px;
+      font-weight: bold;
+      background-color: white;
+      color: black;
+      text-align: center;
+    }
+
+    #tabelaDados thead tr:nth-child(2) th,
+    #tabelaDados1 thead tr:nth-child(2) th,
+    #tabelaDados2 thead tr:nth-child(2) th,
+    #tabelaDados3 thead tr:nth-child(2) th,
+    #tabelaDados4 thead tr:nth-child(2) th,
+    #tabelaDados5 thead tr:nth-child(2) th {
+      background-color: #007BFF;
+      color: white;
+      font-weight: bold;
+    }
+
+    #tabelaDados tbody td,
+    #tabelaDados1 tbody td,
+    #tabelaDados2 tbody td,
+    #tabelaDados3 tbody td,
+    #tabelaDados4 tbody td,
+    #tabelaDados5 tbody td {
+      background-color: white;
+      font-weight: normal;
+    }
+
+    #tabelaDados tbody td:nth-child(3),
+    #tabelaDados1 tbody td:nth-child(3),
+    #tabelaDados2 tbody td:nth-child(3),
+    #tabelaDados3 tbody td:nth-child(3),
+    #tabelaDados4 tbody td:nth-child(3),
+    #tabelaDados5 tbody td:nth-child(3) {
+      width: 10%;
+    }
+    
+.suggestions-list {
+  display: none;
+  position: absolute;
+  top: 100%;
+  width: 400px; /* Deve ter a mesma largura do input */
+  max-height: 200px; /* Tamanho máximo para a lista de sugestões */
+  background-color: #333; /* Fundo cinza escuro */
+  color: white; /* Texto branco */
+  border: 1px solid #ccc;
+  border-top: none;
+  margin-top: 5px;
+  font-family: Arial, Helvetica, sans-serif;
+  transform: translateY(-14px);
+  left: 54px;
+}
+
+.suggestion-item {
+  padding: 10px;
+  cursor: pointer;
+}
+
+.suggestion-item:hover {
+  background-color: #555;
+}
+
+@media (min-width: 250px) and (max-width: 450px) {
+.escolha,  /* 620px */
+.rcs, /* 216px */
+.suggestions-list, /* 400px */
+.search-box,
+.conservaEspecial /* 400px */ {
+    zoom: 0.6;
+    transform-origin: top left;
+}
+}
+@media (min-width: 450px) and (max-width: 600px) {
+  .escolha,  /* 620px */
+.rcs, /* 216px */
+.suggestions-list, /* 400px */
+.search-box,
+.conservaEspecial /* 400px */ {
+    zoom: 0.7;
+    transform-origin: top left;
+}
+
+}
+@media (min-width: 600px) and (max-width: 768px) {
+  .escolha,  /* 620px */
+.rcs, /* 216px */
+.suggestions-list, /* 400px */
+.search-box,
+.conservaEspecial /* 400px */ {
+    zoom: 0.8;
+    transform-origin: top left;
+}
+
+}
+@media (min-width: 768px) and (max-width: 1366px) {
+.escolha,  /* 620px */
+.rcs, /* 216px */
+.suggestions-list, /* 400px */
+.search-box,
+.conservaEspecial /* 400px */ {
+    zoom: 0.9;
+    transform-origin: top left;
+}
+
+}
+
+    @keyframes widthCrescer {
+  0% {
+    width: 0;
+  }
+  40% {
+    width: 50px;
+  }
+    100% {
+    width: 400px;
+  }
+}
+@keyframes inicio {
+  from {
+    transform: translateY(-80px);
+  }
+  to {
+      transform: translateY(0);
+  }
+}
+@keyframes inicio1 {
+  from {
+    transform: translateY(-70px);
+  }
+  to {
+      transform: translateY(0);
+  }
+}
+@keyframes deslizar {
+  from {
+    transform: translateX(120%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+@keyframes deslizar1 {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-120%);
+  }
+}
