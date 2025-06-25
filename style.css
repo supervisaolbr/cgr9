@@ -3,46 +3,69 @@
     }
    .switch {
       position: relative;
-      width: 80px;
-      height: 40px;
-      background-color: #ccc;
+      width: 75px;
+      height: 30px;
+      background-color: gray;
       border-radius: 19px;
       cursor: pointer;
-      transition: background-color 0.3s;
       box-sizing: border-box;
       font-family: Arial, Helvetica, sans-serif;
       margin: 0 auto;
+      transition: background-color 0.5s ease-in;
+    }
+    /* Texto 1 some da direita pra esquerda */
+    #toggleSwitch.off span:nth-child(1) {
+      animation: sumir 0.5s forwards;
+    }
+
+    /* Texto 2 some da esquerda pra direita */
+    #toggleSwitch.on span:nth-child(2) {
+      animation: sumir 0.5s forwards;
+    }
+
+    @keyframes sumir {
+      from {
+      transform: scaleX(100%);
+      opacity: 1;
+      }
+      to {
+      transform: scaleX(0);
+      opacity: 0;
+      }
     }
     .conserva {
       font-family: Arial, Helvetica, sans-serif;
       font-size: 16px;
       margin: 0 auto;
+      display: flex;
+      align-items: center;
     }
     .switch:hover {
-      background-color: #a8a8a8;
+      background-color: black;
     }
 
     .switch.on {
       background-color: #5ed362;
+      transition: background-color 0.5 ease-in;
     }
     .switch.on:hover {
       background-color: #58c45c;
     }
 
     .toggle-circle {
-      width: 30px;
-      height: 30px;
+      width: 20px;
+      height: 20px;
       background-color: white;
       border-radius: 50%;
       position: absolute;
       top: 5px;
-      left: 7px;
+      left: 5px;
       transition: left 0.3s;
       z-index: 2;
     }
 
     .switch.on .toggle-circle {
-      left: 42px;
+      left: 50px;
     }
 
     .switch-labels {
@@ -100,15 +123,8 @@
     }
 
     .conservaEspecial {
-      display: none;
-      align-items: center;
-      justify-content: center;
-      position: absolute;
       margin: 0 auto;
-      gap: 15px;
-      top: 81px;
-      left: 33.5vw;
-      animation: inicio1 0.8s ease-in-out forwards;
+      gap: 10px;
     }
 
     .conservaEspecial.t1 {
@@ -122,14 +138,14 @@
       background-color: lightgray;
       margin: 0 auto;
       border-radius: 20px;
-      width: 216px;
+      width: 500px;
       position: relative;
       display: none;
       align-items: center;
       justify-content: center;
       min-height: 20px;
       animation: inicio1 0.8s ease-in-out forwards;
-      left: 202px;
+      left: 50px;
       top: 20px;
       z-index: 3;
     }
@@ -400,7 +416,7 @@
 }
 }
 @media (min-width: 450px) and (max-width: 600px) {
-  .escolha,  /* 620px */
+.escolha,  /* 620px */
 .rcs, /* 216px */
 .suggestions-list, /* 400px */
 .search-box,
