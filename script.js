@@ -602,11 +602,19 @@ function preencherCampos(texto) {
         let novaLargura = larguraAtual / 1900 * 1.5;
         let antigaLargura = larguraAtual / 1900;
         antigaLargura = Math.min(antigaLargura, 1);
-        novaLargura = Math.min(Math.max(novaLargura, 0.3), 1);
+        novaLargura = Math.min(Math.max(novaLargura, 0.5), 1);
         const allElements = document.querySelector(".PainelOcr");
         const allAutoScript = document.querySelector(".AutoScripts");
-        if (allAutoScript) allAutoScript.style.transform = `scale(${antigaLargura})`;
-        if (allElements) allElements.style.transform = `scale(${novaLargura})`;
+        if (allAutoScript) {
+          allAutoScript.style.transform = `scale(${antigaLargura})`;
+          allAutoScript.style.transformOrigin = 'top left';
+          allAutoScript.style.width = '1900px';
+        }
+        if (allElements) {
+          allElements.style.transform = `scale(${novaLargura})`;
+          allElements.style.transformOrigin = 'top left';
+          allElements.style.width = '1900px';
+        }
       });
 
       function AlternateTo() {
