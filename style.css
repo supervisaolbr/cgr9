@@ -531,7 +531,7 @@
 .rcs, /* 216px */
 .suggestions-list, /* 400px */
 .search-box /* 400px */ {
-    zoom: 0.75;
+    zoom: 0.7;
     transform-origin: top left;
 }
 
