@@ -599,10 +599,10 @@ function preencherCampos(texto) {
 
       window.addEventListener('resize', () => {
         larguraAtual = window.innerWidth;
-        let novaLargura = larguraAtual / 1900 * 1.5;
-        let antigaLargura = larguraAtual / 1900;
+        let novaLargura = larguraAtual / 1900 * 1.25;
+        let antigaLargura = larguraAtual / 2600;
         antigaLargura = Math.min(antigaLargura, 1);
-        novaLargura = Math.min(Math.max(novaLargura, 0.5), 1);
+        novaLargura = Math.min(Math.max(novaLargura, 0.2), 1);
         const allElements = document.querySelector(".PainelOcr");
         const allAutoScript = document.querySelector(".AutoScripts");
         if (allAutoScript) {
