@@ -347,7 +347,7 @@ const verificarTecla = (event) => {
 
     // Atualiza ao carregar e redimensionar
     atualizarEscala();
-    window.addEventListener('resize', atualizarEscala);
+    window.addEventListener('load', atualizarEscala);
 
 // Adiciona o evento de keydown para a página inteira
 document.addEventListener('keydown', verificarTecla);
@@ -606,8 +606,6 @@ function preencherCampos(texto) {
         };
       }
 
-      // Adicionando o evento resize com debounce
-      window.addEventListener('resize', debounce(ajustarTela, 200)); // 200ms de delay
       window.addEventListener('load', debounce(ajustarTela, 1000));
 
       function ajustarTela() {
