@@ -597,7 +597,10 @@ function preencherCampos(texto) {
       });
       let larguraAtual = window.innerWidth;
 
-      window.addEventListener('resize', () => {
+      window.addEventListener('resize', ajustarTela);
+      window.addEventListener('load', ajustarTela);
+
+      function ajustarTela() {
         larguraAtual = window.innerWidth;
         let novaLargura = larguraAtual / 1900 * 1.5;
         let antigaLargura = larguraAtual / 1900;
@@ -611,7 +614,7 @@ function preencherCampos(texto) {
         if (allElements) {
           allElements.style.zoom = `${novaLargura}`;
         }
-      });
+      }
 
       function AlternateTo() {
         const pasta = document.querySelector('.AutoScriptsPasta');
