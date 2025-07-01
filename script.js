@@ -606,14 +606,10 @@ function preencherCampos(texto) {
         const allElements = document.querySelector(".PainelOcr");
         const allAutoScript = document.querySelector(".AutoScripts");
         if (allAutoScript) {
-          allAutoScript.style.transform = `scale(${antigaLargura})`;
-          allAutoScript.style.transformOrigin = 'top left';
-          allAutoScript.style.width = '1900px';
+          allAutoScript.style.zoom = `${antigaLargura}`;
         }
         if (allElements) {
-          allElements.style.transform = `scale(${novaLargura})`;
-          allElements.style.transformOrigin = 'top left';
-          allElements.style.width = '1900px';
+          allElements.style.zoom = `${novaLargura}`;
         }
       });
 
