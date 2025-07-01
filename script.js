@@ -595,10 +595,20 @@ function preencherCampos(texto) {
           }
         });
       });
-      let larguraAtual = window.innerWidth;
 
-      window.addEventListener('resize', ajustarTela);
-      window.addEventListener('load', ajustarTela);
+      // Variável para controlar o tempo entre os eventos
+      let timeoutId;
+      // Função debounce
+      function debounce(func, delay) {
+        return function() {
+          clearTimeout(timeoutId); // Limpa o timeout anterior
+          timeoutId = setTimeout(func, delay); // Aguarda o "delay" antes de executar a função
+        };
+      }
+
+      // Adicionando o evento resize com debounce
+      window.addEventListener('resize', debounce(ajustarTela, 200)); // 200ms de delay
+      window.addEventListener('load', debounce(ajustarTela, 1000));
 
       function ajustarTela() {
         larguraAtual = window.innerWidth;
