@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>CGR 9 São José do Rio Preto - SP</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css"> 
+</head>
+<body>
+  <div class="escolha" align="center" id="escolhaContainer">
+    <div class="opt2">
+      <i class="fas fa-search" onclick="toggleSearch(); AutoScriptsToggle()" id="searchIcon"></i>
+    </div>
+    <input type="text" id="searchInput" class="search-box" placeholder="Pesquisar...">
+    <div id="suggestionsList" class="suggestions-list"></div>
+    <div class="opt1">
+      <button onclick="Alternar1(); AutoScriptsToggle()" id="btn1">Rodovias</button>
+    </div>
+    <div class="opt1">
+      <button onclick="Alternar2(); AutoScriptsToggle()" id="btn2">Tutorial</button>
+    </div>
+    <div class="opt1">
+      <button onclick="Alternar3(); AutoScriptsToggle()" id="btn3">Automatizações</button>
+    </div>
+  </div>
+
+  <div class="rcs" id="rcsEscolha">
+    <div class="opt3"><button onclick="rc1s()" id="rc1">9.1</button></div>
+    <div class="opt3"><button onclick="rc2s()" id="rc2">9.2</button></div>
+    <div class="opt3"><button onclick="rc3s()" id="rc3">9.3</button></div>
+    <div class="opt3"><button onclick="rc4s()" id="rc4">9.4</button></div>
+    <div class="opt3"><button onclick="rc5s()" id="rc5">320</button></div>
+    <div class="conservaEspecial">
+    <div class="switch off" id="toggleSwitch">
+    <div class="switch-labels">
+      <span>ON</span>
+      <span>OFF</span>
+    </div>
+      <div class="toggle-circle"></div>
+    </div>
+    <div class="conserva">Trecho em conserva</div>
+    </div>
+  </div>
+
+  <div class="tabelaRelative">
+  <table id="tabelaDados">
+    <thead>
+      <tr>
+        <th class="titulo-principal" colspan="8">CGR 9 - São José do Rio Preto - SP</th>
+      </tr>
+      <tr>
+        <th>Rodovia</th>
+        <th>CGR</th>
+        <th>Residência de Conservação</th>
+        <th>Km (inicial)</th>
+        <th>Km (final)</th>
+        <th>Extensão</th>
+        <th>Coordenada (inicial)</th>
+        <th>Coordenada (final)</th>
+      </tr>
+    </thead>
+    <tbody> 
+      <!-- RC 9.1 -->
+    <tr><td>SP 304</td><td>CGR 9</td><td>RC 9.1</td><td>406,700</td><td>459,250</td><td>52,550</td><td><a href="https://earth.google.com/web/search/-21.5504000,+-49.1594300/@-21.5503906,-49.15944081,526.58130851a,1288.406375d,35y,0h,0t,0r/data=CmAaMhIsGem3rwPnjDXAISoAxjNolEjAKhgtMjEuNTUwNDAwMCwgLTQ5LjE1OTQzMDAYAiABIiYKJAl5yJg86Do1wBEq1kbhmzw1wBnv6Fn_JsJIwCFaO3fMAcRIwEICCAE6AwoBMEICCABKDQj___________8BEAA" class="coord" target="_blank">-21.550400, -49.159430</a></td><td><a href="https://earth.google.com/web/search/-21.2334300,+-49.5240600/@-21.23343,-49.52406,390.65723341a,781.48939952d,35y,0h,0t,0r/data=CmAaMhIsGcDnhxHCOzXAISWS6GUUw0jAKhgtMjEuMjMzNDMwMCwgLTQ5LjUyNDA2MDAYAiABIiYKJAmatCBQdo42wBFlnZuBrNU2wBmXfFZGQZhHwCH5dxrIv-ZHwEICCAE6AwoBMEICCABKDQj___________8BEAA" class="coord" target="_blank">-21.233430, -49.524060</a></td></tr>
+    <tr><td>SP 321</td><td>CGR 9</td><td>RC 9.1</td><td>444,220</td><td>491,600</td><td>47,380</td><td><a href="https://earth.google.com/web/search/-21.486509,+-49.220430/@-21.486509,-49.22043,450.25528562a,780.08474186d,35y,0h,0t,0r/data=Cl4aMBIqGaw1lNqLfDXAIVWH3Aw3nEjAKhYtMjEuNDg2NTA5LCAtNDkuMjIwNDMwGAIgASImCiQJEnUDDhZ5M8ARj-hbhX2HNsAZMyejVEC_RsAh-EJLyVIcSsBCAggBOgMKATBCAggASg0I____________ARAA" class="coord" target="_blank">-21.486509, -49.220430</a></td><td><a href="https://earth.google.com/web/search/-21.16028,+-48.98709/@-21.15987406,-48.9863752,516.49699507a,1785.79045678d,35y,0h,0t,0r/data=ClwaLhIoGfAzLhwIKTXAIbQaEvdYfkjAKhQtMjEuMTYwMjgsIC00OC45ODcwORgCIAEiJgokCaL3OTmnezXAEfwkJHZwfTXAGTgtW3M9m0jAIXThXaYwnUjAQgIIAToDCgEwQgIIAEoNCP___________wEQAA" class="coord" target="_blank">-21.160280, -48.987090</a></td></tr>
+    <tr><td>SP 379</td><td>CGR 9</td><td>RC 9.1</td><td>0,000</td><td>52,530</td><td>52,530</td><td><a href="https://earth.google.com/web/search/-20.9937000,+-49.2090700/@-20.9937,-49.20907,570.65120173a,782.93824208d,35y,0h,0t,0r/data=CiwiJgokCYQMhhz5VDXAEe6vOSy7VjXAGWmjDo2EvkjAIfseIWhvwEjAQgIIAToDCgEwQgIIAEoNCP___________wEQAA" class="coord" target="_blank">-20.993700, -49.209070</a></td><td><a href="https://earth.google.com/web/search/-21.3353600,+-49.4959100/@-21.33536,-49.49591,430.04972078a,781.09595629d,35y,0h,0t,0r/data=CiwiJgokCUEwF5avnjTAEQVekRGR3TTAGdra6grglkjAIdGna9M820jAQgIIAToDCgEwQgIIAEoNCP___________wEQAA" class="coord" target="_blank">-20.715500, -49.476500</a></td></tr>
+    <tr><td>SPA 411/310</td><td>CGR 9</td><td>RC 9.1</td><td>0,000</td><td>4,770</td><td>4,770</td><td><a href="https://earth.google.com/web/search/-20.99061,+-49.20476/@-20.99061,-49.20476,555.48217093a,782.86605687d,35y,0h,0t,0r/data=ClwaLhIoGS8X8Z2Y_TTAIbXDX5M1mkjAKhQtMjAuOTkwNjEsIC00OS4yMDQ3NhgCIAEiJgokCWx7FaG79jTAEcHsGq6P DTAGUREx-9qlkjAISvIAG-EmEjAQgIIAToDCgEwQgIIAEoNCP___________wEQAA" class="coord" target="_blank">-20.990610, -49.204760</a></td><td><a href="https://earth.google.com/web/search/-20.96757,+-49.18334/@-20.96757,-49.18334,546.23581767a,783.03732544d,35y,0h,0t,0r/data=ClwaLhIoGTmX4qqy9zTAIToGZK93l0jAKhQtMjAuOTY3NTcsIC00OS4xODMzNBgCIAEiJgokCS1Xz0M95TTAERrrVvwYFTXAGUunWKsyhUjAIZayBsJNuUjAQgIIAToDCgEwQgIIAEoNCP___________wEQAA" class="coord" target="_blank">-20.967570, -49.183340</a></td></tr>
+    <tr><td>SPA 004/379</td><td>CGR 9</td><td>RC 9.1</td><td>0,000</td><td>4,000</td><td>4,000</td><td><a href="https://earth.google.com/web/search/-21.015116,+-49.229034/@-21.015116,-49.229034,509.14895201a,782.72230415d,35y,0h,0t,0r/data=Cl4aMBIqGXalZaTeAzXAIQbWcfxQnUjAKhYtMjEuMDE1MTE2LCAtNDkuMjI5MDM0GAIgASImCiQJ8I2h45_8NMARwaySUZH-NMAZgmCT8iaZSMAh6CYsNESbSMBCAggBOgMKATBCAggASg0I____________ARAA" class="coord" target="_blank">-21.015116, -49.229034</a></td><td><a href="https://earth.google.com/web/search/-20.99594,+-49.25948/@-20.99594,-49.25948,471.63468756a,782.83531712d,35y,0h,0t,0r/data=ClwaLhIoGTrHgOz1_jTAIaj7AKQ2oUjAKhQtMjAuOTk1OTQsIC00OS4yNTk0OBgCIAEiJgokCTkA64zuAjXAETD6pLXOBDXAGdn4GLZLnEjAITazykJWnkjAQgIIAToDCgEwQgIIAEoNCP___________wEQAA" class="coord" target="_blank">-20.99594, -49.25948</a></td></tr>
+    <tr><td>SPA 011/379</td><td>CGR 9</td><td>RC 9.1</td><td>0,000</td><td>0,125</td><td>0,125</td><td><a href="https://earth.google.com/web/search/-21.075861,+-49.250864/@-21.075861,-49.250864,423.98795871a,782.36826718d,35y,0h,0t,0r/data=Cl4aMBIqGbcKYqBrEzXAITPfwU8coEjAKhYtMjEuMDc1ODYxLCAtNDkuMjUwODY0GAIgASImCiQJBIpcVBcTNcAR6AlR9uEUNcAZyXC8ZT-eSMAh6zANuzKgSMBCAggBOgMKATBCAggASg0I____________ARAA" class="coord" target="_blank">-21.075861, -49.250864</a></td><td><a href="https://earth.google.com/web/search/-21.079970,+-49.241667/@-21.07997,-49.241667,451.11121649a,782.34300456d,35y,0h,0t,0r/data=Cl4aMBIqGT-p9ul4FDXAId_CuvHunkjAKhYtMjEuMDc5OTcwLCAtNDkuMjQxNjY3GAIgASImCiQJE9IOxIUuNcARljL6bU4wNcAZ9vdID8mkSMAhopTcm7qmSMBCAggBOgMKATBCAggASg0I____________ARAA" class="coord" target="_blank">-21.079970, -49.241667</a></td></tr>
+    <tr><td>SPA 024/379</td><td>CGR 9</td><td>RC 9.1</td><td>0,000</td><td>1,710</td><td>1,710</td><td><a href="https://earth.google.com/web/search/-21.185212,+-49.294978/@-21.18521284,-49.29497785,445.97603098a,782.67516403d,35y,0h,0t,0r/data=Cl4aMBIqGabTug1qLzXAIQ6Fz9bBpUjAKhYtMjEuMTg1MjEyLCAtNDkuMjk0OTc4GAIgASImCiQJF4P8gu4xNcARROddaLEzNcAZgo9p5n-kSMAhB-eDNWumSMBCAggBOgMKATBCAggASg0I____________ARAA" class="coord" target="_blank">-21.185212, -49.294978</a></td><td><a href="https://earth.google.com/web/search/-21.198486,+-49.292650/@-21.19848588,-49.29264998,428.84315198a,784.29076411d,35y,0h,0t,0r/data=Cl4aMBIqGb-2fvrPMjXAIVKWIY51pUjAKhYtMjEuMTk4NDg2LCAtNDkuMjkyNjUwGAIgASImCiQJOAw5yAz-NMARJD7rCt__NMAZFGMf9jigSMAhE17hUTSiSMBCAggBOgMKATBCAggASg0I____________ARAA" class="coord" target="_blank">-21.198486, -49.292650</a></td></tr>
+    <tr><td>SPA 424/310</td><td>CGR 9</td><td>RC 9.1</td><td>0,000</td><td>2,400</td><td>2,400</td><td><a href="https://earth.google.com/web/search/-20.907940,+-49.291921/@-20.90794,-49.291921,521.79864744a,783.34683377d,35y,0h,0t,0r/data=Cl4aMBIqGfG6fsFu6DTAIf8B1qpdpUjAKhYtMjAuOTA3OTQwLCAtNDkuMjkxOTIxGAIgASImCiQJ1Z5Ji_DlNMARoAgBiuDnNMAZfgZSivSiSMAhMMCH6g-lSMBCAggBOgMKATBCAggASg0I____________ARAA" class="coord" target="_blank">-20.907940, -49.291921</a></td><td><a href="https://earth.google.com/web/search/-20.901986,+-49.281318/@-20.901986,-49.281318,551.08467631a,783.38135469d,35y,0h,0t,0r/data=Cl4aMBIqGSlz843o5jTAIVjjbDoCpEjAKhYtMjAuOTAxOTg2LCAtNDkuMjgxMzE4GAIgASImCiQJ0t18bYsSNcARO7PTzUsUNcAZBrJfOyifSMAhYQwkZBChSMBCAggBOgMKATBCAggASg0I____________ARAA" class="coord" target="_blank">-20.901986, -49.281318</a></td></tr>
+    <tr><td>SPA 196/351</td><td>CGR 9</td><td>RC 9.1</td><td>0,000</td><td>6,150</td><td>6,150</td><td><a href="https://earth.google.com/web/search/-21.084523,+-48.820858/@-21.084523,-48.820858,520.98589227a,782.33350374d,35y,0h,0t,0r/data=Cl4aMBIqGYPCoEyjFTXAIXpU_N8RaUjAKhYtMjEuMDg0NTIzLCAtNDguODIwODU4GAIgASImCiQJYcMsIEggNcAR6P0HZzAiNcAZRYcQw9NqSMAh0L5pjudsSMBCAggBOgMKATBCAggASg0I____________ARAA" class="coord" target="_blank">-21.084523, -48.820858</a></td><td><a href="https://earth.google.com/web/search/-21.129826,+-48.842702/@-21.129826,-48.842702,531.65074211a,782.05105648d,35y,0h,0t,0r/data=Cl4aMBIqGaUr2EY8ITXAIQsjvajda0jAKhYtMjEuMTI5ODI2LCAtNDguODQyNzAyGAIgASImCiQJHWyCeULjNMARGOhtKQrxNMAZYXU4mJydSMAh-qsDvZmsSMBCAggBOgMKATBCAggASg0I____________ARAA" class="coord" target="_blank">-21.129826, -48.842702</a></td></tr>
+    <tr><td>SPA 364/310</td><td>CGR 9</td><td>RC 9.1</td><td>0,000</td><td>12,699</td><td>12,699</td><td><a href="https://earth.google.com/web/search/-21.275718,+-48.859715/@-21.275718,-48.859715,568.05897654a,781.19161259d,35y,0h,0t,0r/data=Cl4aMBIqGSTrcHSVRjXAIblwICQLbkjAKhYtMjEuMjc1NzE4LCAtNDguODU5NzE1GAIgASImCiQJwM1BfcswNcARzRMUqM0yNcAZtSENGCFjSMAhZMT3VFFlSMBCAggBOgMKATBCAggASg0I____________ARAA" class="coord" target="_blank">-21.275718, -48.859715</a></td><td><a href="https://earth.google.com/web/search/-21.194528,+-48.782996/@-21.194528,-48.782996,601.68517875a,781.67036783d,35y,0h,0t,0r/data=Cl4aMBIqGQIoRpbMMTXAIQxzgjY5ZEjAKhYtMjEuMTk0NTI4LCAtNDguNzgyOTk2GAIgASImCiQJt14FFLEUNcARLmP5fpUWNcAZ3cDsKApoSMAhlWESlxlqSMBCAggBOgMKATBCAggASg0I____________ARAA" class="coord" target="_blank">-21.194528, -48.782996</a></td></tr>
+    <tr><td>SPA 375/310</td><td>CGR 9</td><td>RC 9.1</td><td>0,000</td><td>10,030</td><td>6,500</td><td><a href="https://earth.google.com/web/search/-21.206268,+-48.930391/@-21.206268,-48.930391,573.64580108a,781.60124498d,35y,0h,0t,0r/data=Cl4aMBIqGRk2yvrNNDXAIRK_Yg0Xd0jAKhYtMjEuMjA2MjY4LCAtNDguOTMwMzkxGAIgASImCiQJrCqcTrolNcAROJ_R_aEnNcAZAW4Em7R5SMAhPrm41Md7SMBCAggBOgMKATBCAggASg0I____________ARAA" class="coord" target="_blank">-21.206268, -48.930391</a></td><td><a href="https://earth.google.com/web/search/-21.151095,+-48.958930/@-21.151095,-48.95893,530.03870311a,781.94210897d,35y,0h,0t,0r/data=Cl4aMBIqGdCWcymuJjXAIZ6T3je-ekjAKhYtMjEuMTUxMDk1LCAtNDguOTU4OTMwGAIgASImCiQJ3xA5sppFNcARiODEL5BHNcAZOrI2x_lsSMAhNy8KgRxvSMBCAggBOgMKATBCAggASg0I____________ARAA" class="coord" target="_blank">-21.151095, -48.958930</a></td></tr>
+    <tr><td>SPA 395/310</td><td>CGR 9</td><td>RC 9.1</td><td>0,000</td><td>15,000</td><td>15,000</td><td><a href="https://earth.google.com/web/search/-21.089100,+-49.076003/@-21.0891,-49.076003,517.28842732a,782.28952074d,35y,0h,0t,0r/data=Cl4aMBIqGdcS8kHPFjXAIe6yX3e6iUjAKhYtMjEuMDg5MTAwLCAtNDkuMDc2MDAzGAIgASImCiQJmwj7Osr3NMARTRTjhbX5NMAZAt4Ef06DSMAheI7GAWWFSMBCAggBOgMKATBCAggASg0I____________ARAA" class="coord" target="_blank">-21.089100, -49.076003</a></td><td><a href="https://earth.google.com/web/search/-20.971678,+-49.033989/@-20.971678,-49.033989,538.83927277a,782.9757465d,35y,0h,0t,0r/data=Cl4aMBIqGSE-sOO_-DTAIT22ZcBZhEjAKhYtMjAuOTcxNjc4LCAtNDkuMDMzOTg5GAIgASImCiQJ3vJQG9IzNcAR3T5W08k1NcAZ6oGdmgR2SMAhNfwngCl4SMBCAggBOgMKATBCAggASg0I____________ARAA" class="coord" target="_blank">-20.971678, -49.033989</a></td></tr>
+    <tr><td>SPA 402/310</td><td>CGR 9</td><td>RC 9.1</td><td>0,000</td><td>7,000</td><td>7,000</td><td><a href="https://earth.google.com/web/search/-21.048998,+-49.128912/@-21.048998,-49.128912,553.07977424a,782.52427973d,35y,0h,0t,0r/data=Cl4aMBIqGcSRByKLDDXAIe4HPDCAkEjAKhYtMjEuMDQ4OTk4LCAtNDkuMTI4OTEyGAIgASImCiQJ4aYZhgcaNcAR5WYSa8YbNcAZVX6TvFOWSMAhgBbRYDqYSMBCAggBOgMKATBCAggASg0I____________ARAA" class="coord" target="_blank">-21.048998, -49.128912</a></td><td><a href="https://earth.google.com/web/search/-21.105087,+-49.181856/@-21.105087,-49.181856,420.17233747a,782.19581677d,35y,0h,0t,0r/data=Cl4aMBIqGRg8TPvmGjXAIWpKsg5Hl0jAKhYtMjEuMTA1MDg3LCAtNDkuMTgxODU2GAIgASImCiQJLf1Pu90VNcARqH8_wsAXNcAZYLILgLOISMAhe7OzbsGKSMBCAggBOgMKATBCAggASg0I____________ARAA" class="coord" target="_blank">-21.105087, -49.181856</a></td></tr>
+    <tr><td>SPA 423/310</td><td>CGR 9</td><td>RC 9.1</td><td>0,000</td><td>16,827</td><td>16,827</td><td><a href="https://earth.google.com/web/search/-21.033958,+-49.378846/@-21.033958,-49.378846,441.62551876a,782.61221792d,35y,0h,0t,0r/data=Cl4aMBIqGQRws3ixCDXAITYclgZ-sEjAKhYtMjEuMDMzOTU4LCAtNDkuMzc4ODQ2GAIgASImCiQJBVnW1XvnNMARRc8N_2DpNMAZpsrRuZOkSMAhlno8V6OmSMBCAggBOgMKATBCAggASg0I____________ARAA" class="coord" target="_blank">-21.033958, -49.378846</a></td><td><a href="https://earth.google.com/web/search/-20.907935,+-49.293809/@-20.907935,-49.293809,521.97212535a,783.3467803d,35y,0h,0t,0r/data=Cl4aMBIqGc3km21u6DTAIZ4ih4ibpUjAKhYtMjAuOTA3OTM1LCAtNDkuMjkzODA5GAIgASImCiQJB8kw6ZILNcARVSgyVIMNNcAZUuY6AXKPSMAhjyk9X46RSMBCAggBOgMKATBCAggASg0I____________ARAA" class="coord" target="_blank">-20.907935, -49.293809</a></td></tr>
+
+    <!-- RC 9.2 -->
+    <tr><td>SPA 498/320</td><td>CGR 9</td><td>RC 9.2</td><td>0,000</td><td>2,000</td><td>2,000</td><td><a href="google.com" class="coord" target="_blank">-21.5504000, -49.1594300</a></td><td><a href="google.com" class="coord" target="_blank">-21.5504000, -49.1594300</a></td></tr>
+    <tr><td>SPA 499/320</td><td>CGR 9</td><td>RC 9.2</td><td>0,000</td><td>1,600</td><td>1,600</td><td><a href="google.com" class="coord" target="_blank">-21.5504000, -49.1594300</a></td><td><a href="google.com" class="coord" target="_blank">-21.5504000, -49.1594300</a></td></tr>
+    <tr><td>SPA 529/320</td><td>CGR 9</td><td>RC 9.2</td><td>0,000</td><td>5,900</td><td>5,900</td><td><a href="google.com" class="coord" target="_blank">-21.5504000, -49.1594300</a></td><td><a href="google.com" class="coord" target="_blank">-21.5504000, -49.1594300</a></td></tr>
+    <tr><td>SPA 541/320</td><td>CGR 9</td><td>RC 9.2</td><td>0,000</td><td>3,600</td><td>3,600</td><td><a href="google.com" class="coord" target="_blank">-21.5504000, -49.1594300</a></td><td><a href="google.com" class="coord" target="_blank">-21.5504000, -49.1594300</a></td></tr>
+    <tr><td>SPA 550/320</td><td>CGR 9</td><td>RC 9.2</td><td>0,000</td><td>12,670</td><td>12,670</td><td><a href="google.com" class="coord" target="_blank">-21.5504000, -49.1594300</a></td><td><a href="google.com" class="coord" target="_blank">-21.5504000, -49.1594300</a></td></tr>
+    <tr><td>SP 322</td><td>CGR 9</td><td>RC 9.2</td><td>556,400</td><td>603,000</td><td>46,600</td><td><a href="google.com" class="coord" target="_blank">-21.5504000, -49.1594300</a></td><td><a href="google.com" class="coord" target="_blank">-21.5504000, -49.1594300</a></td></tr>
+    <tr><td>SP 479</td><td>CGR 9</td><td>RC 9.2</td><td>0,000</td><td>60,610</td><td>60,610</td><td><a href="google.com" class="coord" target="_blank">-21.5504000, -49.1594300</a></td><td><a href="google.com" class="coord" target="_blank">-21.5504000, -49.1594300</a></td></tr>
+    <tr><td>SP 527</td><td>CGR 9</td><td>RC 9.2</td><td>0,000</td><td>32,992</td><td>32,992</td><td><a href="google.com" class="coord" target="_blank">-21.5504000, -49.1594300</a></td><td><a href="google.com" class="coord" target="_blank">-21.5504000, -49.1594300</a></td></tr>
+    <tr><td>SP 461</td><td>CGR 9</td><td>RC 9.2</td><td>111,815</td><td>165,316</td><td>53,501</td><td><a href="google.com" class="coord" target="_blank">-21.5504000, -49.1594300</a></td><td><a href="google.com" class="coord" target="_blank">-21.5504000, -49.1594300</a></td></tr>
+    <tr><td>SPA 137/461</td><td>CGR 9</td><td>RC 9.2</td><td>0,000</td><td>6,000</td><td>6,000</td><td><a href="google.com" class="coord" target="_blank">-21.5504000, -49.1594300</a></td><td><a href="google.com" class="coord" target="_blank">-21.5504000, -49.1594300</a></td></tr>
+    <tr><td>SP 463</td><td>CGR 9</td><td>RC 9.2</td><td>185,050</td><td>192,000</td><td>6,950</td><td><a href="google.com" class="coord" target="_blank">-21.5504000, -49.1594300</a></td><td><a href="google.com" class="coord" target="_blank">-21.5504000, -49.1594300</a></td></tr>
+    <tr><td>SP 543</td><td>CGR 9</td><td>RC 9.2</td><td>553,930</td><td>607,325</td><td>53,395</td><td><a href="google.com" class="coord" target="_blank">-21.5504000, -49.1594300</a></td><td><a href="google.com" class="coord" target="_blank">-21.5504000, -49.1594300</a></td></tr>
+
+    <!-- RC 9.3 -->
+    <tr><td>SP 304</td><td>CGR 9</td><td>RC 9.3</td><td>459,250</td><td>474,000</td><td>14,750</td><td><a href="google.com" class="coord" target="_blank">-21.5504000, -49.1594300</a></td><td><a href="google.com" class="coord" target="_blank">-21.5504000, -49.1594300</a></td></tr>
+    <tr><td>SP 310</td><td>CGR 9</td><td>RC 9.3</td><td>454,300</td><td>518,400</td><td>64,100</td><td><a href="google.com" class="coord" target="_blank">-21.5504000, -49.1594300</a></td><td><a href="google.com" class="coord" target="_blank">-21.5504000, -49.1594300</a></td></tr>
+    <tr><td>SPA 451/310</td><td>CGR 9</td><td>RC 9.3</td><td>0,000</td><td>12,554</td><td>12,554</td><td><a href="google.com" class="coord" target="_blank">-21.5504000, -49.1594300</a></td><td><a href="google.com" class="coord" target="_blank">-21.5504000, -49.1594300</a></td></tr>
+    <tr><td>SPA 463/310</td><td>CGR 9</td><td>RC 9.3</td><td>0,000</td><td>6,300</td><td>6,300</td><td><a href="google.com" class="coord" target="_blank">-21.5504000, -49.1594300</a></td><td><a href="google.com" class="coord" target="_blank">-21.5504000, -49.1594300</a></td></tr>
+    <tr><td>SP 377</td><td>CGR 9</td><td>RC 9.3</td><td>0,000</td><td>14,700</td><td>14,700</td><td><a href="google.com" class="coord" target="_blank">-21.5504000, -49.1594300</a></td><td><a href="google.com" class="coord" target="_blank">-21.5504000, -49.1594300</a></td></tr>
+    <tr><td>SPA 473/310</td><td>CGR 9</td><td>RC 9.3</td><td>0,000</td><td>20,050</td><td>20,050</td><td><a href="google.com" class="coord" target="_blank">-21.5504000, -49.1594300</a></td><td><a href="google.com" class="coord" target="_blank">-21.5504000, -49.1594300</a></td></tr>
+    <tr><td>SPA 482/310</td><td>CGR 9</td><td>RC 9.3</td><td>0,000</td><td>20,670</td><td>20,670</td><td><a href="google.com" class="coord" target="_blank">-21.5504000, -49.1594300</a></td><td><a href="google.com" class="coord" target="_blank">-21.5504000, -49.1594300</a></td></tr>
+    <tr><td>SPA 492/310</td><td>CGR 9</td><td>RC 9.3</td><td>0,000</td><td>1,000</td><td>1,000</td><td><a href="google.com" class="coord" target="_blank">-21.5504000, -49.1594300</a></td><td><a href="google.com" class="coord" target="_blank">-21.5504000, -49.1594300</a></td></tr>
+    <tr><td>SPA 498/310</td><td>CGR 9</td><td>RC 9.3</td><td>0,000</td><td>10,887</td><td>10,887</td><td><a href="google.com" class="coord" target="_blank">-21.5504000, -49.1594300</a></td><td><a href="google.com" class="coord" target="_blank">-21.5504000, -49.1594300</a></td></tr>
+    <tr><td>SPA 499/310</td><td>CGR 9</td><td>RC 9.3</td><td>0,000</td><td>5,370</td><td>5,370</td><td><a href="google.com" class="coord" target="_blank">-21.5504000, -49.1594300</a></td><td><a href="google.com" class="coord" target="_blank">-21.5504000, -49.1594300</a></td></tr>
+    <tr><td>SP 355</td><td>CGR 9</td><td>RC .3</td><td>5,000</td><td>13,000</td><td>8,000</td><td><a href="google.com" class="coord" target="_blank">-21.5504000, -49.1594300</a></td><td><a href="google.com" class="coord" target="_blank">-21.5504000, -49.1594300</a></td></tr>
+    <tr><td>SP 355</td><td>CGR 9</td><td>RC 9.3</td><td>16,600</td><td>23,130</td><td>6,530</td><td><a href="google.com" class="coord" target="_blank">-21.5504000, -49.1594300</a></td><td><a href="google.com" class="coord" target="_blank">-21.5504000, -49.1594300</a></td></tr>
+    <tr><td>SP 355</td><td>CGR 9</td><td>RC 9.3</td><td>23,680</td><td>35,950</td><td>12,270</td><td><a href="google.com" class="coord" target="_blank">-21.5504000, -49.1594300</a></td><td><a href="google.com" class="coord" target="_blank">-21.5504000, -49.1594300</a></td></tr>
+    <tr><td>SP 355</td><td>CGR 9</td><td>RC 9.3</td><td>38,120</td><td>45,000</td><td>6,880</td><td><a href="google.com" class="coord" target="_blank">-21.5504000, -49.1594300</a></td><td><a href="google.com" class="coord" target="_blank">-21.5504000, -49.1594300</a></td></tr>
+    <tr><td>SP 423</td><td>CGR 9</td><td>RC 9.3</td><td>0,000</td><td>36,000</td><td>36,000</td><td><a href="google.com" class="coord" target="_blank">-21.5504000, -49.1594300</a></td><td><a href="google.com" class="coord" target="_blank">-21.5504000, -49.1594300</a></td></tr>
+    <tr><td>SPA 07/423</td><td>CGR 9</td><td>RC 9.3</td><td>0,000</td><td>0,300</td><td>0,300</td><td><a href="google.com" class="coord" target="_blank">-21.5504000, -49.1594300</a></td><td><a href="google.com" class="coord" target="_blank">-21.5504000, -49.1594300</a></td></tr>
+    <tr><td>SPA 018/422</td><td>CGR 9</td><td>RC 9.3</td><td>0,000</td><td>0,160</td><td>0,160</td><td><a href="google.com" class="coord" target="_blank">-21.5504000, -49.1594300</a></td><td><a href="google.com" class="coord" target="_blank">-21.5504000, -49.1594300</a></td></tr>
+    <tr><td>SPA 171/425</td><td>CGR 9</td><td>RC 9.3</td><td>0,000</td><td>1,700</td><td>1,700</td><td><a href="google.com" class="coord" target="_blank">-21.5504000, -49.1594300</a></td><td><a href="google.com" class="coord" target="_blank">-21.5504000, -49.1594300</a></td></tr>
+    <tr><td>SP 427</td><td>CGR 9</td><td>RC 9.3</td><td>12,600</td><td>30,181</td><td>17,581</td><td><a href="google.com" class="coord" target="_blank">-21.5504000, -49.1594300</a></td><td><a href="google.com" class="coord" target="_blank">-21.5504000, -49.1594300</a></td></tr>
+    <tr><td>SP 461</td><td>CGR 9</td><td>RC 9.3</td><td>71,980</td><td>111,815</td><td>39,835</td><td><a href="google.com" class="coord" target="_blank">-21.5504000, -49.1594300</a></td><td><a href="google.com" class="coord" target="_blank">-21.5504000, -49.1594300</a></td></tr>
+    <tr><td>SP 425</td><td>CGR 9</td><td>RC 9.3</td><td>157,550</td><td>184,400</td><td>26,850</td><td><a href="google.com" class="coord" target="_blank">-21.5504000, -49.1594300</a></td><td><a href="google.com" class="coord" target="_blank">-21.5504000, -49.1594300</a></td></tr>
+    <tr><td>SPA 030/387</td><td>CGR 9</td><td>RC 9.3</td><td>0,000</td><td>2,500</td><td>2,500</td><td><a href="google.com" class="coord" target="_blank">-21.5504000, -49.1594300</a></td><td><a href="google.com" class="coord" target="_blank">-21.5504000, -49.1594300</a></td></tr>
+    <tr><td>SPA 038/387</td><td>CGR 9</td><td>RC 9.3</td><td>0,000</td><td>2,380</td><td>2,380</td><td><a href="google.com" class="coord" target="_blank">-21.5504000, -49.1594300</a></td><td><a href="google.com" class="coord" target="_blank">-21.5504000, -49.1594300</a></td></tr>
+
+    <!-- RC 9.4 -->
+    <tr><td>SPA 568/320</td><td>CGR 9</td><td>RC 9.4</td><td>0,000</td><td>1,000</td><td>1,000</td><td><a href="google.com" class="coord" target="_blank">-21.5504000, -49.1594300</a></td><td><a href="google.com" class="coord" target="_blank">-21.5504000, -49.1594300</a></td></tr>
+    <tr><td>SPA 599/320</td><td>CGR 9</td><td>RC 9.4</td><td>0,000</td><td>1,470</td><td>1,470</td><td><a href="google.com" class="coord" target="_blank">-21.5504000, -49.1594300</a></td><td><a href="google.com" class="coord" target="_blank">-21.5504000, -49.1594300</a></td></tr>
+    <tr><td>SPA 626/320</td><td>CGR 9</td><td>RC 9.4</td><td>0,000</td><td>2,080</td><td>2,080</td><td><a href="google.com" class="coord" target="_blank">-21.5504000, -49.1594300</a></td><td><a href="google.com" class="coord" target="_blank">-21.5504000, -49.1594300</a></td></tr>
+    <tr><td>SPA 314/563</td><td>CGR 9</td><td>RC 9.4</td><td>0,000</td><td>0,330</td><td>0,330</td><td><a href="google.com" class="coord" target="_blank">-21.5504000, -49.1594300</a></td><td><a href="google.com" class="coord" target="_blank">-21.5504000, -49.1594300</a></td></tr>
+    <tr><td>SPA 331/563</td><td>CGR 9</td><td>RC 9.4</td><td>0,000</td><td>0,220</td><td>0,220</td><td><a href="google.com" class="coord" target="_blank">-21.5504000, -49.1594300</a></td><td><a href="google.com" class="coord" target="_blank">-21.5504000, -49.1594300</a></td></tr>
+    <tr><td>SPA 308/563</td><td>CGR 9</td><td>RC 9.4</td><td>0,000</td><td>0,570</td><td>0,570</td><td><a href="google.com" class="coord" target="_blank">-21.5504000, -49.1594300</a></td><td><a href="google.com" class="coord" target="_blank">-21.5504000, -49.1594300</a></td></tr>
+    <tr><td>SPA 129/463</td><td>CGR 9</td><td>RC 9.4</td><td>0,000</td><td>0,660</td><td>0,660</td><td><a href="google.com" class="coord" target="_blank">-21.5504000, -49.1594300</a></td><td><a href="google.com" class="coord" target="_blank">-21.5504000, -49.1594300</a></td></tr>
+    <tr><td>SPA 157/463</td><td>CGR 9</td><td>RC 9.4</td><td>0,000</td><td>0,715</td><td>0,715</td><td><a href="google.com" class="coord" target="_blank">-21.5504000, -49.1594300</a></td><td><a href="google.com" class="coord" target="_blank">-21.5504000, -49.1594300</a></td></tr>
+    <tr><td>SPA 169/463</td><td>CGR 9</td><td>RC 9.4</td><td>0,000</td><td>1,260</td><td>1,260</td><td><a href="google.com" class="coord" target="_blank">-21.5504000, -49.1594300</a></td><td><a href="google.com" class="coord" target="_blank">-21.5504000, -49.1594300</a></td></tr>
+    <tr><td>SPA 174/463</td><td>CGR 9</td><td>RC 9.4</td><td>0,000</td><td>2,200</td><td>2,200</td><td><a href="google.com" class="coord" target="_blank">-21.5504000, -49.1594300</a></td><td><a href="google.com" class="coord" target="_blank">-21.5504000, -49.1594300</a></td></tr>
+    <tr><td>SPA 181/463</td><td>CGR 9</td><td>RC 9.4</td><td>0,000</td><td>10,200</td><td>10,200</td><td><a href="google.com" class="coord" target="_blank">-21.5504000, -49.1594300</a></td><td><a href="google.com" class="coord" target="_blank">-21.5504000, -49.1594300</a></td></tr>
+    <tr><td>SPA 349/563</td><td>CGR 9</td><td>RC 9.4</td><td>0,000</td><td>2,531</td><td>2,531</td><td><a href="google.com" class="coord" target="_blank">-21.5504000, -49.1594300</a></td><td><a href="google.com" class="coord" target="_blank">-21.5504000, -49.1594300</a></td></tr>
+    <tr><td>SPA 627/320</td><td>CGR 9</td><td>RC 9.4</td><td>322,000</td><td>4,370</td><td>317,630</td><td><a href="google.com" class="coord" target="_blank">-21.5504000, -49.1594300</a></td><td><a href="google.com" class="coord" target="_blank">-21.5504000, -49.1594300</a></td></tr>
+    <tr><td>SPA 106/595</td><td>CGR 9</td><td>RC 9.4</td><td>0,000</td><td>2,450</td><td>2,450</td><td><a href="google.com" class="coord" target="_blank">-21.5504000, -49.1594300</a></td><td><a href="google.com" class="coord" target="_blank">-21.5504000, -49.1594300</a></td></tr>
+    <tr><td>SPA 111/595</td><td>CGR 9</td><td>RC 9.4</td><td>0,000</td><td>2,990</td><td>2,990</td><td><a href="google.com" class="coord" target="_blank">-21.5504000, -49.1594300</a></td><td><a href="google.com" class="coord" target="_blank">-21.5504000, -49.1594300</a></td></tr>
+    <tr><td>SPA 121/595</td><td>CGR 9</td><td>RC 9.4</td><td>0,000</td><td>1,141</td><td>1,141</td><td><a href="google.com" class="coord" target="_blank">-21.5504000, -49.1594300</a></td><td><a href="google.com" class="coord" target="_blank">-21.5504000, -49.1594300</a></td></tr>
+    <tr><td>SPA 631/320</td><td>CGR 9</td><td>RC 9.4</td><td>0,000</td><td>6,450</td><td>6,450</td><td><a href="google.com" class="coord" target="_blank">-21.5504000, -49.1594300</a></td><td><a href="google.com" class="coord" target="_blank">-21.5504000, -49.1594300</a></td></tr>
+    <tr><td>05 SPA 631/320</td><td>CGR 9</td><td>RC 9.4</td><td>0,000</td><td>4,350</td><td>4,350</td><td><a href="google.com" class="coord" target="_blank">-21.5504000, -49.1594300</a></td><td><a href="google.com" class="coord" target="_blank">-21.5504000, -49.1594300</a></td></tr>
+    <tr><td>SPA 174/463</td><td>CGR 9</td><td>RC 9.4</td><td>0,000</td><td>2,200</td><td>2,200</td><td><a href="google.com" class="coord" target="_blank">-21.5504000, -49.1594300</a></td><td><a href="google.com" class="coord" target="_blank">-21.5504000, -49.1594300</a></td></tr>
+    <tr><td>SP 557</td><td>CGR 9</td><td>RC 9.4</td><td>0,000</td><td>20,062</td><td>20,062</td><td><a href="google.com" class="coord" target="_blank">-21.5504000, -49.1594300</a></td><td><a href="google.com" class="coord" target="_blank">-21.5504000, -49.1594300</a></td></tr>
+    <tr><td>SP 561</td><td>CGR 9</td><td>RC 9.4</td><td>0,000</td><td>42,248</td><td>42,248</td><td><a href="google.com" class="coord" target="_blank">-21.5504000, -49.1594300</a></td><td><a href="google.com" class="coord" target="_blank">-21.5504000, -49.1594300</a></td></tr>
+    <tr><td>SP 563</td><td>CGR 9</td><td>RC 9.4</td><td>353,000</td><td>307,950</td><td>45,050</td><td><a href="google.com" class="coord" target="_blank">-21.5504000, -49.1594300</a></td><td><a href="google.com" class="coord" target="_blank">-21.5504000, -49.1594300</a></td></tr>
+    <tr><td>SP 463</td><td>CGR 9</td><td>RC 9.4</td><td>121,900</td><td>185,050</td><td>63,150</td><td><a href="google.com" class="coord" target="_blank">-21.5504000, -49.1594300</a></td><td><a href="google.com" class="coord" target="_blank">-21.5504000, -49.1594300</a></td></tr>
+    <tr><td>SPA 569/320</td><td>CGR 9</td><td>RC 9.4</td><td>0,000</td><td>12,940</td><td>12,940</td><td><a href="google.com" class="coord" target="_blank">-21.5504000, -49.1594300</a></td><td><a href="google.com" class="coord" target="_blank">-21.5504000, -49.1594300</a></td></tr>
+
+    <!-- 320 -->
+    <tr><td>SP 320</td><td>CGR 9</td><td>SP 320</td><td>453,000</td><td>519,000</td><td>66,000</td><td><a href="google.com" class="coord" target="_blank">-21.5504000, -49.1594300</a></td><td><a href="google.com" class="coord" target="_blank">-21.5504000, -49.1594300</a></td></tr>
+    <tr><td>SP 320</td><td>CGR 9</td><td> SP 320</td><td>519,000</td><td>579,000</td><td>60,000</td><td><a href="google.com" class="coord" target="_blank">-21.5504000, -49.1594300</a></td><td><a href="google.com" class="coord" target="_blank">-21.5504000, -49.1594300</a></td></tr>
+    <tr><td>SP 320</td><td>CGR 9</td><td>SP 320</td><td>579,000</td><td>639,700</td><td>60,700</td><td><a href="google.com" class="coord" target="_blank">-21.5504000, -49.1594300</a></td><td><a href="google.com" class="coord" target="_blank">-21.5504000, -49.1594300</a></td></tr>
+  </tbody>
+  </table>
+
+    <table id="tabelaDados1">
+    <thead>
+      <tr>
+        <th class="titulo-principal" colspan="8">CGR 9 - São José do Rio Preto - SP</th>
+      </tr>
+      <tr>
+        <th>Rodovia</th>
+        <th>CGR</th>
+        <th>Residência de Conservação</th>
+        <th>Km (inicial)</th>
+        <th>Km (final)</th>
+        <th>Extensão</th>
+        <th>Coordenada (inicial)</th>
+        <th>Coordenada (final)</th>
+      </tr>
+    </thead>
+    <tbody>
+      <!-- RC 9.1 -->
+    <tr><td>SP 304</td><td>CGR 9</td><td>RC 9.1</td><td>406,700</td><td>459,250</td><td>52,550</td><td><a href="https://earth.google.com/web/search/-21.5504000,+-49.1594300/@-21.5503906,-49.15944081,526.58130851a,1288.406375d,35y,0h,0t,0r/data=CmAaMhIsGem3rwPnjDXAISoAxjNolEjAKhgtMjEuNTUwNDAwMCwgLTQ5LjE1OTQzMDAYAiABIiYKJAl5yJg86Do1wBEq1kbhmzw1wBnv6Fn_JsJIwCFaO3fMAcRIwEICCAE6AwoBMEICCABKDQj___________8BEAA" class="coord" target="_blank">-21.550400, -49.159430</a></td><td><a href="https://earth.google.com/web/search/-21.2334300,+-49.5240600/@-21.23343,-49.52406,390.65723341a,781.48939952d,35y,0h,0t,0r/data=CmAaMhIsGcDnhxHCOzXAISWS6GUUw0jAKhgtMjEuMjMzNDMwMCwgLTQ5LjUyNDA2MDAYAiABIiYKJAmatCBQdo42wBFlnZuBrNU2wBmXfFZGQZhHwCH5dxrIv-ZHwEICCAE6AwoBMEICCABKDQj___________8BEAA" class="coord" target="_blank">-21.233430, -49.524060</a></td></tr>
+    <tr><td>SP 321</td><td>CGR 9</td><td>RC 9.1</td><td>444,220</td><td>491,600</td><td>47,380</td><td><a href="https://earth.google.com/web/search/-21.486509,+-49.220430/@-21.486509,-49.22043,450.25528562a,780.08474186d,35y,0h,0t,0r/data=Cl4aMBIqGaw1lNqLfDXAIVWH3Aw3nEjAKhYtMjEuNDg2NTA5LCAtNDkuMjIwNDMwGAIgASImCiQJEnUDDhZ5M8ARj-hbhX2HNsAZMyejVEC_RsAh-EJLyVIcSsBCAggBOgMKATBCAggASg0I____________ARAA" class="coord" target="_blank">-21.486509, -49.220430</a></td><td><a href="https://earth.google.com/web/search/-21.16028,+-48.98709/@-21.15987406,-48.9863752,516.49699507a,1785.79045678d,35y,0h,0t,0r/data=ClwaLhIoGfAzLhwIKTXAIbQaEvdYfkjAKhQtMjEuMTYwMjgsIC00OC45ODcwORgCIAEiJgokCaL3OTmnezXAEfwkJHZwfTXAGTgtW3M9m0jAIXThXaYwnUjAQgIIAToDCgEwQgIIAEoNCP___________wEQAA" class="coord" target="_blank">-21.160280, -48.987090</a></td></tr>
+    <tr><td>SP 379</td><td>CGR 9</td><td>RC 9.1</td><td>0,000</td><td>52,530</td><td>52,530</td><td><a href="https://earth.google.com/web/search/-20.9937000,+-49.2090700/@-20.9937,-49.20907,570.65120173a,782.93824208d,35y,0h,0t,0r/data=CiwiJgokCYQMhhz5VDXAEe6vOSy7VjXAGWmjDo2EvkjAIfseIWhvwEjAQgIIAToDCgEwQgIIAEoNCP___________wEQAA" class="coord" target="_blank">-20.993700, -49.209070</a></td><td><a href="https://earth.google.com/web/search/-21.3353600,+-49.4959100/@-21.33536,-49.49591,430.04972078a,781.09595629d,35y,0h,0t,0r/data=CiwiJgokCUEwF5avnjTAEQVekRGR3TTAGdra6grglkjAIdGna9M820jAQgIIAToDCgEwQgIIAEoNCP___________wEQAA" class="coord" target="_blank">-20.715500, -49.476500</a></td></tr>
+    <tr><td>SPA 411/310</td><td>CGR 9</td><td>RC 9.1</td><td>0,000</td><td>4,770</td><td>4,770</td><td><a href="https://earth.google.com/web/search/-20.99061,+-49.20476/@-20.99061,-49.20476,555.48217093a,782.86605687d,35y,0h,0t,0r/data=ClwaLhIoGS8X8Z2Y_TTAIbXDX5M1mkjAKhQtMjAuOTkwNjEsIC00OS4yMDQ3NhgCIAEiJgokCWx7FaG79jTAEcHsGq6P DTAGUREx-9qlkjAISvIAG-EmEjAQgIIAToDCgEwQgIIAEoNCP___________wEQAA" class="coord" target="_blank">-20.990610, -49.204760</a></td><td><a href="https://earth.google.com/web/search/-20.96757,+-49.18334/@-20.96757,-49.18334,546.23581767a,783.03732544d,35y,0h,0t,0r/data=ClwaLhIoGTmX4qqy9zTAIToGZK93l0jAKhQtMjAuOTY3NTcsIC00OS4xODMzNBgCIAEiJgokCS1Xz0M95TTAERrrVvwYFTXAGUunWKsyhUjAIZayBsJNuUjAQgIIAToDCgEwQgIIAEoNCP___________wEQAA" class="coord" target="_blank">-20.967570, -49.183340</a></td></tr>
+    <tr><td>SPA 004/379</td><td>CGR 9</td><td>RC 9.1</td><td>0,000</td><td>4,000</td><td>4,000</td><td><a href="https://earth.google.com/web/search/-21.015116,+-49.229034/@-21.015116,-49.229034,509.14895201a,782.72230415d,35y,0h,0t,0r/data=Cl4aMBIqGXalZaTeAzXAIQbWcfxQnUjAKhYtMjEuMDE1MTE2LCAtNDkuMjI5MDM0GAIgASImCiQJ8I2h45_8NMARwaySUZH-NMAZgmCT8iaZSMAh6CYsNESbSMBCAggBOgMKATBCAggASg0I____________ARAA" class="coord" target="_blank">-21.015116, -49.229034</a></td><td><a href="https://earth.google.com/web/search/-20.99594,+-49.25948/@-20.99594,-49.25948,471.63468756a,782.83531712d,35y,0h,0t,0r/data=ClwaLhIoGTrHgOz1_jTAIaj7AKQ2oUjAKhQtMjAuOTk1OTQsIC00OS4yNTk0OBgCIAEiJgokCTkA64zuAjXAETD6pLXOBDXAGdn4GLZLnEjAITazykJWnkjAQgIIAToDCgEwQgIIAEoNCP___________wEQAA" class="coord" target="_blank">-20.995940, -49.259480</a></td></tr>
+    <tr><td>SPA 011/379</td><td>CGR 9</td><td>RC 9.1</td><td>0,000</td><td>0,125</td><td>0,125</td><td><a href="https://earth.google.com/web/search/-21.075861,+-49.250864/@-21.075861,-49.250864,423.98795871a,782.36826718d,35y,0h,0t,0r/data=Cl4aMBIqGbcKYqBrEzXAITPfwU8coEjAKhYtMjEuMDc1ODYxLCAtNDkuMjUwODY0GAIgASImCiQJBIpcVBcTNcAR6AlR9uEUNcAZyXC8ZT-eSMAh6zANuzKgSMBCAggBOgMKATBCAggASg0I____________ARAA" class="coord" target="_blank">-21.075861, -49.250864</a></td><td><a href="https://earth.google.com/web/search/-21.079970,+-49.241667/@-21.07997,-49.241667,451.11121649a,782.34300456d,35y,0h,0t,0r/data=Cl4aMBIqGT-p9ul4FDXAId_CuvHunkjAKhYtMjEuMDc5OTcwLCAtNDkuMjQxNjY3GAIgASImCiQJE9IOxIUuNcARljL6bU4wNcAZ9vdID8mkSMAhopTcm7qmSMBCAggBOgMKATBCAggASg0I____________ARAA" class="coord" target="_blank">-21.079970, -49.241667</a></td></tr>
+    <tr><td>SPA 024/379</td><td>CGR 9</td><td>RC 9.1</td><td>0,000</td><td>1,710</td><td>1,710</td><td><a href="https://earth.google.com/web/search/-21.185212,+-49.294978/@-21.18521284,-49.29497785,445.97603098a,782.67516403d,35y,0h,0t,0r/data=Cl4aMBIqGabTug1qLzXAIQ6Fz9bBpUjAKhYtMjEuMTg1MjEyLCAtNDkuMjk0OTc4GAIgASImCiQJF4P8gu4xNcARROddaLEzNcAZgo9p5n-kSMAhB-eDNWumSMBCAggBOgMKATBCAggASg0I____________ARAA" class="coord" target="_blank">-21.185212, -49.294978</a></td><td><a href="https://earth.google.com/web/search/-21.198486,+-49.292650/@-21.19848588,-49.29264998,428.84315198a,784.29076411d,35y,0h,0t,0r/data=Cl4aMBIqGb-2fvrPMjXAIVKWIY51pUjAKhYtMjEuMTk4NDg2LCAtNDkuMjkyNjUwGAIgASImCiQJOAw5yAz-NMARJD7rCt__NMAZFGMf9jigSMAhE17hUTSiSMBCAggBOgMKATBCAggASg0I____________ARAA" class="coord" target="_blank">-21.198486, -49.292650</a></td></tr>
+    <tr><td>SPA 424/310</td><td>CGR 9</td><td>RC 9.1</td><td>0,000</td><td>2,400</td><td>2,400</td><td><a href="https://earth.google.com/web/search/-20.907940,+-49.291921/@-20.90794,-49.291921,521.79864744a,783.34683377d,35y,0h,0t,0r/data=Cl4aMBIqGfG6fsFu6DTAIf8B1qpdpUjAKhYtMjAuOTA3OTQwLCAtNDkuMjkxOTIxGAIgASImCiQJ1Z5Ji_DlNMARoAgBiuDnNMAZfgZSivSiSMAhMMCH6g-lSMBCAggBOgMKATBCAggASg0I____________ARAA" class="coord" target="_blank">-20.907940, -49.291921</a></td><td><a href="https://earth.google.com/web/search/-20.901986,+-49.281318/@-20.901986,-49.281318,551.08467631a,783.38135469d,35y,0h,0t,0r/data=Cl4aMBIqGSlz843o5jTAIVjjbDoCpEjAKhYtMjAuOTAxOTg2LCAtNDkuMjgxMzE4GAIgASImCiQJ0t18bYsSNcARO7PTzUsUNcAZBrJfOyifSMAhYQwkZBChSMBCAggBOgMKATBCAggASg0I____________ARAA" class="coord" target="_blank">-20.901986, -49.281318</a></td></tr>
+    <tr><td>SPA 196/351</td><td>CGR 9</td><td>RC 9.1</td><td>0,000</td><td>6,150</td><td>6,150</td><td><a href="https://earth.google.com/web/search/-21.084523,+-48.820858/@-21.084523,-48.820858,520.98589227a,782.33350374d,35y,0h,0t,0r/data=Cl4aMBIqGYPCoEyjFTXAIXpU_N8RaUjAKhYtMjEuMDg0NTIzLCAtNDguODIwODU4GAIgASImCiQJYcMsIEggNcAR6P0HZzAiNcAZRYcQw9NqSMAh0L5pjudsSMBCAggBOgMKATBCAggASg0I____________ARAA" class="coord" target="_blank">-21.084523, -48.820858</a></td><td><a href="https://earth.google.com/web/search/-21.129826,+-48.842702/@-21.129826,-48.842702,531.65074211a,782.05105648d,35y,0h,0t,0r/data=Cl4aMBIqGaUr2EY8ITXAIQsjvajda0jAKhYtMjEuMTI5ODI2LCAtNDguODQyNzAyGAIgASImCiQJHWyCeULjNMARGOhtKQrxNMAZYXU4mJydSMAh-qsDvZmsSMBCAggBOgMKATBCAggASg0I____________ARAA" class="coord" target="_blank">-21.129826, -48.842702</a></td></tr>
+    <tr><td>SPA 364/310</td><td>CGR 9</td><td>RC 9.1</td><td>0,000</td><td>12,699</td><td>12,699</td><td><a href="https://earth.google.com/web/search/-21.275718,+-48.859715/@-21.275718,-48.859715,568.05897654a,781.19161259d,35y,0h,0t,0r/data=Cl4aMBIqGSTrcHSVRjXAIblwICQLbkjAKhYtMjEuMjc1NzE4LCAtNDguODU5NzE1GAIgASImCiQJwM1BfcswNcARzRMUqM0yNcAZtSENGCFjSMAhZMT3VFFlSMBCAggBOgMKATBCAggASg0I____________ARAA" class="coord" target="_blank">-21.275718, -48.859715</a></td><td><a href="https://earth.google.com/web/search/-21.194528,+-48.782996/@-21.194528,-48.782996,601.68517875a,781.67036783d,35y,0h,0t,0r/data=Cl4aMBIqGQIoRpbMMTXAIQxzgjY5ZEjAKhYtMjEuMTk0NTI4LCAtNDguNzgyOTk2GAIgASImCiQJt14FFLEUNcARLmP5fpUWNcAZ3cDsKApoSMAhlWESlxlqSMBCAggBOgMKATBCAggASg0I____________ARAA" class="coord" target="_blank">-21.194528, -48.782996</a></td></tr>
+    <tr><td>SPA 375/310</td><td>CGR 9</td><td>RC 9.1</td><td>0,000</td><td>10,030</td><td>6,500</td><td><a href="https://earth.google.com/web/search/-21.206268,+-48.930391/@-21.206268,-48.930391,573.64580108a,781.60124498d,35y,0h,0t,0r/data=Cl4aMBIqGRk2yvrNNDXAIRK_Yg0Xd0jAKhYtMjEuMjA2MjY4LCAtNDguOTMwMzkxGAIgASImCiQJrCqcTrolNcAROJ_R_aEnNcAZAW4Em7R5SMAhPrm41Md7SMBCAggBOgMKATBCAggASg0I____________ARAA" class="coord" target="_blank">-21.206268, -48.930391</a></td><td><a href="https://earth.google.com/web/search/-21.151095,+-48.958930/@-21.151095,-48.95893,530.03870311a,781.94210897d,35y,0h,0t,0r/data=Cl4aMBIqGdCWcymuJjXAIZ6T3je-ekjAKhYtMjEuMTUxMDk1LCAtNDguOTU4OTMwGAIgASImCiQJ3xA5sppFNcARiODEL5BHNcAZOrI2x_lsSMAhNy8KgRxvSMBCAggBOgMKATBCAggASg0I____________ARAA" class="coord" target="_blank">-21.151095, -48.958930</a></td></tr>
+    <tr><td>SPA 395/310</td><td>CGR 9</td><td>RC 9.1</td><td>0,000</td><td>15,000</td><td>15,000</td><td><a href="https://earth.google.com/web/search/-21.089100,+-49.076003/@-21.0891,-49.076003,517.28842732a,782.28952074d,35y,0h,0t,0r/data=Cl4aMBIqGdcS8kHPFjXAIe6yX3e6iUjAKhYtMjEuMDg5MTAwLCAtNDkuMDc2MDAzGAIgASImCiQJmwj7Osr3NMARTRTjhbX5NMAZAt4Ef06DSMAheI7GAWWFSMBCAggBOgMKATBCAggASg0I____________ARAA" class="coord" target="_blank">-21.089100, -49.076003</a></td><td><a href="https://earth.google.com/web/search/-20.971678,+-49.033989/@-20.971678,-49.033989,538.83927277a,782.9757465d,35y,0h,0t,0r/data=Cl4aMBIqGSE-sOO_-DTAIT22ZcBZhEjAKhYtMjAuOTcxNjc4LCAtNDkuMDMzOTg5GAIgASImCiQJ3vJQG9IzNcAR3T5W08k1NcAZ6oGdmgR2SMAhNfwngCl4SMBCAggBOgMKATBCAggASg0I____________ARAA" class="coord" target="_blank">-20.971678, -49.033989</a></td></tr>
+    <tr><td>SPA 402/310</td><td>CGR 9</td><td>RC 9.1</td><td>0,000</td><td>7,000</td><td>7,000</td><td><a href="https://earth.google.com/web/search/-21.048998,+-49.128912/@-21.048998,-49.128912,553.07977424a,782.52427973d,35y,0h,0t,0r/data=Cl4aMBIqGcSRByKLDDXAIe4HPDCAkEjAKhYtMjEuMDQ4OTk4LCAtNDkuMTI4OTEyGAIgASImCiQJ4aYZhgcaNcAR5WYSa8YbNcAZVX6TvFOWSMAhgBbRYDqYSMBCAggBOgMKATBCAggASg0I____________ARAA" class="coord" target="_blank">-21.048998, -49.128912</a></td><td><a href="https://earth.google.com/web/search/-21.105087,+-49.181856/@-21.105087,-49.181856,420.17233747a,782.19581677d,35y,0h,0t,0r/data=Cl4aMBIqGRg8TPvmGjXAIWpKsg5Hl0jAKhYtMjEuMTA1MDg3LCAtNDkuMTgxODU2GAIgASImCiQJLf1Pu90VNcARqH8_wsAXNcAZYLILgLOISMAhe7OzbsGKSMBCAggBOgMKATBCAggASg0I____________ARAA" class="coord" target="_blank">-21.105087, -49.181856</a></td></tr>
+    <tr><td>SPA 423/310</td><td>CGR 9</td><td>RC 9.1</td><td>0,000</td><td>16,827</td><td>16,827</td><td><a href="https://earth.google.com/web/search/-21.033958,+-49.378846/@-21.033958,-49.378846,441.62551876a,782.61221792d,35y,0h,0t,0r/data=Cl4aMBIqGQRws3ixCDXAITYclgZ-sEjAKhYtMjEuMDMzOTU4LCAtNDkuMzc4ODQ2GAIgASImCiQJBVnW1XvnNMARRc8N_2DpNMAZpsrRuZOkSMAhlno8V6OmSMBCAggBOgMKATBCAggASg0I____________ARAA" class="coord" target="_blank">-21.033958, -49.378846</a></td><td><a href="https://earth.google.com/web/search/-20.907935,+-49.293809/@-20.907935,-49.293809,521.97212535a,783.3467803d,35y,0h,0t,0r/data=Cl4aMBIqGc3km21u6DTAIZ4ih4ibpUjAKhYtMjAuOTA3OTM1LCAtNDkuMjkzODA5GAIgASImCiQJB8kw6ZILNcARVSgyVIMNNcAZUuY6AXKPSMAhjyk9X46RSMBCAggBOgMKATBCAggASg0I____________ARAA" class="coord" target="_blank">-20.907935, -49.293809</a></td></tr>
+  </tbody>
+  </table>
+
+      <table id="tabelaDados2">
+    <thead>
+      <tr>
+        <th class="titulo-principal" colspan="8">CGR 9 - São José do Rio Preto - SP</th>
+      </tr>
+      <tr>
+        <th>Rodovia</th>
+        <th>CGR</th>
+        <th>Residência de Conservação</th>
+        <th>Km (inicial)</th>
+        <th>Km (final)</th>
+        <th>Extensão</th>
+        <th>Coordenada (inicial)</th>
+        <th>Coordenada (final)</th>
+      </tr>
+    </thead>
+    <tbody>
+    <!-- RC 9.2 -->
+    <tr><td>SPA 498/320</td><td>CGR 9</td><td>RC 9.2</td><td>0,000</td><td>2,000</td><td>2,000</td><td><a href="google.com" class="coord" target="_blank">-21.5504000, -49.1594300</a></td><td><a href="google.com" class="coord" target="_blank">-21.5504000, -49.1594300</a></td></tr>
+    <tr><td>SPA 499/320</td><td>CGR 9</td><td>RC 9.2</td><td>0,000</td><td>1,600</td><td>1,600</td><td><a href="google.com" class="coord" target="_blank">-21.5504000, -49.1594300</a></td><td><a href="google.com" class="coord" target="_blank">-21.5504000, -49.1594300</a></td></tr>
+    <tr><td>SPA 529/320</td><td>CGR 9</td><td>RC 9.2</td><td>0,000</td><td>5,900</td><td>5,900</td><td><a href="google.com" class="coord" target="_blank">-21.5504000, -49.1594300</a></td><td><a href="google.com" class="coord" target="_blank">-21.5504000, -49.1594300</a></td></tr>
+    <tr><td>SPA 541/320</td><td>CGR 9</td><td>RC 9.2</td><td>0,000</td><td>3,600</td><td>3,600</td><td><a href="google.com" class="coord" target="_blank">-21.5504000, -49.1594300</a></td><td><a href="google.com" class="coord" target="_blank">-21.5504000, -49.1594300</a></td></tr>
+    <tr><td>SPA 550/320</td><td>CGR 9</td><td>RC 9.2</td><td>0,000</td><td>12,670</td><td>12,670</td><td><a href="google.com" class="coord" target="_blank">-21.5504000, -49.1594300</a></td><td><a href="google.com" class="coord" target="_blank">-21.5504000, -49.1594300</a></td></tr>
+    <tr><td>SP 322</td><td>CGR 9</td><td>RC 9.2</td><td>556,400</td><td>603,000</td><td>46,600</td><td><a href="google.com" class="coord" target="_blank">-21.5504000, -49.1594300</a></td><td><a href="google.com" class="coord" target="_blank">-21.5504000, -49.1594300</a></td></tr>
+    <tr><td>SP 479</td><td>CGR 9</td><td>RC 9.2</td><td>0,000</td><td>60,610</td><td>60,610</td><td><a href="google.com" class="coord" target="_blank">-21.5504000, -49.1594300</a></td><td><a href="google.com" class="coord" target="_blank">-21.5504000, -49.1594300</a></td></tr>
+    <tr><td>SP 527</td><td>CGR 9</td><td>RC 9.2</td><td>0,000</td><td>32,992</td><td>32,992</td><td><a href="google.com" class="coord" target="_blank">-21.5504000, -49.1594300</a></td><td><a href="google.com" class="coord" target="_blank">-21.5504000, -49.1594300</a></td></tr>
+    <tr><td>SP 461</td><td>CGR 9</td><td>RC 9.2</td><td>111,815</td><td>165,316</td><td>53,501</td><td><a href="google.com" class="coord" target="_blank">-21.5504000, -49.1594300</a></td><td><a href="google.com" class="coord" target="_blank">-21.5504000, -49.1594300</a></td></tr>
+    <tr><td>SPA 137/461</td><td>CGR 9</td><td>RC 9.2</td><td>0,000</td><td>6,000</td><td>6,000</td><td><a href="google.com" class="coord" target="_blank">-21.5504000, -49.1594300</a></td><td><a href="google.com" class="coord" target="_blank">-21.5504000, -49.1594300</a></td></tr>
+    <tr><td>SP 463</td><td>CGR 9</td><td>RC 9.2</td><td>185,050</td><td>192,000</td><td>6,950</td><td><a href="google.com" class="coord" target="_blank">-21.5504000, -49.1594300</a></td><td><a href="google.com" class="coord" target="_blank">-21.5504000, -49.1594300</a></td></tr>
+    <tr><td>SP 543</td><td>CGR 9</td><td>RC 9.2</td><td>553,930</td><td>607,325</td><td>53,395</td><td><a href="google.com" class="coord" target="_blank">-21.5504000, -49.1594300</a></td><td><a href="google.com" class="coord" target="_blank">-21.5504000, -49.1594300</a></td></tr>
+</tbody>
+  </table>
+
+    <table id="tabelaDados3">
+    <thead>
+      <tr>
+        <th class="titulo-principal" colspan="8">CGR 9 - São José do Rio Preto - SP</th>
+      </tr>
+      <tr>
+        <th>Rodovia</th>
+        <th>CGR</th>
+        <th>Residência de Conservação</th>
+        <th>Km (inicial)</th>
+        <th>Km (final)</th>
+        <th>Extensão</th>
+        <th>Coordenada (inicial)</th>
+        <th>Coordenada (final)</th>
+      </tr>
+    </thead>
+    <tbody>
+    <!-- RC 9.3 -->
+    <tr><td>SP 304</td><td>CGR 9</td><td>RC 9.3</td><td>459,250</td><td>474,000</td><td>14,750</td><td><a href="google.com" class="coord" target="_blank">-21.5504000, -49.1594300</a></td><td><a href="google.com" class="coord" target="_blank">-21.5504000, -49.1594300</a></td></tr>
+    <tr><td>SP 310</td><td>CGR 9</td><td>RC 9.3</td><td>454,300</td><td>518,400</td><td>64,100</td><td><a href="google.com" class="coord" target="_blank">-21.5504000, -49.1594300</a></td><td><a href="google.com" class="coord" target="_blank">-21.5504000, -49.1594300</a></td></tr>
+    <tr><td>SPA 451/310</td><td>CGR 9</td><td>RC 9.3</td><td>0,000</td><td>12,554</td><td>12,554</td><td><a href="google.com" class="coord" target="_blank">-21.5504000, -49.1594300</a></td><td><a href="google.com" class="coord" target="_blank">-21.5504000, -49.1594300</a></td></tr>
+    <tr><td>SPA 463/310</td><td>CGR 9</td><td>RC 9.3</td><td>0,000</td><td>6,300</td><td>6,300</td><td><a href="google.com" class="coord" target="_blank">-21.5504000, -49.1594300</a></td><td><a href="google.com" class="coord" target="_blank">-21.5504000, -49.1594300</a></td></tr>
+    <tr><td>SP 377</td><td>CGR 9</td><td>RC 9.3</td><td>0,000</td><td>14,700</td><td>14,700</td><td><a href="google.com" class="coord" target="_blank">-21.5504000, -49.1594300</a></td><td><a href="google.com" class="coord" target="_blank">-21.5504000, -49.1594300</a></td></tr>
+    <tr><td>SPA 473/310</td><td>CGR 9</td><td>RC 9.3</td><td>0,000</td><td>20,050</td><td>20,050</td><td><a href="google.com" class="coord" target="_blank">-21.5504000, -49.1594300</a></td><td><a href="google.com" class="coord" target="_blank">-21.5504000, -49.1594300</a></td></tr>
+    <tr><td>SPA 482/310</td><td>CGR 9</td><td>RC 9.3</td><td>0,000</td><td>20,670</td><td>20,670</td><td><a href="google.com" class="coord" target="_blank">-21.5504000, -49.1594300</a></td><td><a href="google.com" class="coord" target="_blank">-21.5504000, -49.1594300</a></td></tr>
+    <tr><td>SPA 492/310</td><td>CGR 9</td><td>RC 9.3</td><td>0,000</td><td>1,000</td><td>1,000</td><td><a href="google.com" class="coord" target="_blank">-21.5504000, -49.1594300</a></td><td><a href="google.com" class="coord" target="_blank">-21.5504000, -49.1594300</a></td></tr>
+    <tr><td>SPA 498/310</td><td>CGR 9</td><td>RC 9.3</td><td>0,000</td><td>10,887</td><td>10,887</td><td><a href="google.com" class="coord" target="_blank">-21.5504000, -49.1594300</a></td><td><a href="google.com" class="coord" target="_blank">-21.5504000, -49.1594300</a></td></tr>
+    <tr><td>SPA 499/310</td><td>CGR 9</td><td>RC 9.3</td><td>0,000</td><td>5,370</td><td>5,370</td><td><a href="google.com" class="coord" target="_blank">-21.5504000, -49.1594300</a></td><td><a href="google.com" class="coord" target="_blank">-21.5504000, -49.1594300</a></td></tr>
+    <tr><td>SP 355</td><td>CGR 9</td><td>RC 9.3</td><td>5,000</td><td>13,000</td><td>8,000</td><td><a href="google.com" class="coord" target="_blank">-21.5504000, -49.1594300</a></td><td><a href="google.com" class="coord" target="_blank">-21.5504000, -49.1594300</a></td></tr>
+    <tr><td>SP 355</td><td>CGR 9</td><td>RC 9.3</td><td>16,600</td><td>23,130</td><td>6,530</td><td><a href="google.com" class="coord" target="_blank">-21.5504000, -49.1594300</a></td><td><a href="google.com" class="coord" target="_blank">-21.5504000, -49.1594300</a></td></tr>
+    <tr><td>SP 355</td><td>CGR 9</td><td>RC 9.3</td><td>23,680</td><td>35,950</td><td>12,270</td><td><a href="google.com" class="coord" target="_blank">-21.5504000, -49.1594300</a></td><td><a href="google.com" class="coord" target="_blank">-21.5504000, -49.1594300</a></td></tr>
+    <tr><td>SP 355</td><td>CGR 9</td><td>RC 9.3</td><td>38,120</td><td>45,000</td><td>6,880</td><td><a href="google.com" class="coord" target="_blank">-21.5504000, -49.1594300</a></td><td><a href="google.com" class="coord" target="_blank">-21.5504000, -49.1594300</a></td></tr>
+    <tr><td>SP 423</td><td>CGR 9</td><td>RC 9.3</td><td>0,000</td><td>36,000</td><td>36,000</td><td><a href="google.com" class="coord" target="_blank">-21.5504000, -49.1594300</a></td><td><a href="google.com" class="coord" target="_blank">-21.5504000, -49.1594300</a></td></tr>
+    <tr><td>SPA 07/423</td><td>CGR 9</td><td>RC 9.3</td><td>0,000</td><td>0,300</td><td>0,300</td><td><a href="google.com" class="coord" target="_blank">-21.5504000, -49.1594300</a></td><td><a href="google.com" class="coord" target="_blank">-21.5504000, -49.1594300</a></td></tr>
+    <tr><td>SPA 018/422</td><td>CGR 9</td><td>RC 9.3</td><td>0,000</td><td>0,160</td><td>0,160</td><td><a href="google.com" class="coord" target="_blank">-21.5504000, -49.1594300</a></td><td><a href="google.com" class="coord" target="_blank">-21.5504000, -49.1594300</a></td></tr>
+    <tr><td>SPA 171/425</td><td>CGR 9</td><td>RC 9.3</td><td>0,000</td><td>1,700</td><td>1,700</td><td><a href="google.com" class="coord" target="_blank">-21.5504000, -49.1594300</a></td><td><a href="google.com" class="coord" target="_blank">-21.5504000, -49.1594300</a></td></tr>
+    <tr><td>SP 427</td><td>CGR 9</td><td>RC 9.3</td><td>12,600</td><td>30,181</td><td>17,581</td><td><a href="google.com" class="coord" target="_blank">-21.5504000, -49.1594300</a></td><td><a href="google.com" class="coord" target="_blank">-21.5504000, -49.1594300</a></td></tr>
+    <tr><td>SP 461</td><td>CGR 9</td><td>RC 9.3</td><td>71,980</td><td>111,815</td><td>39,835</td><td><a href="google.com" class="coord" target="_blank">-21.5504000, -49.1594300</a></td><td><a href="google.com" class="coord" target="_blank">-21.5504000, -49.1594300</a></td></tr>
+    <tr><td>SP 425</td><td>CGR 9</td><td>RC 9.3</td><td>157,550</td><td>184,400</td><td>26,850</td><td><a href="google.com" class="coord" target="_blank">-21.5504000, -49.1594300</a></td><td><a href="google.com" class="coord" target="_blank">-21.5504000, -49.1594300</a></td></tr>
+    <tr><td>SPA 030/387</td><td>CGR 9</td><td>RC 9.3</td><td>0,000</td><td>2,500</td><td>2,500</td><td><a href="google.com" class="coord" target="_blank">-21.5504000, -49.1594300</a></td><td><a href="google.com" class="coord" target="_blank">-21.5504000, -49.1594300</a></td></tr>
+    <tr><td>SPA 038/387</td><td>CGR 9</td><td>RC 9.3</td><td>0,000</td><td>2,380</td><td>2,380</td><td><a href="google.com" class="coord" target="_blank">-21.5504000, -49.1594300</a></td><td><a href="google.com" class="coord" target="_blank">-21.5504000, -49.1594300</a></td></tr>
+  </tbody>
+  </table>
+
+      <table id="tabelaDados4">
+    <thead>
+      <tr>
+        <th class="titulo-principal" colspan="8">CGR 9 - São José do Rio Preto - SP</th>
+      </tr>
+      <tr>
+        <th>Rodovia</th>
+        <th>CGR</th>
+        <th>Residência de Conservação</th>
+        <th>Km (inicial)</th>
+        <th>Km (final)</th>
+        <th>Extensão</th>
+        <th>Coordenada (inicial)</th>
+        <th>Coordenada (final)</th>
+      </tr>
+    </thead>
+    <tbody>
+    <!-- RC 9.4 -->
+    <tr><td>SPA 568/320</td><td>CGR 9</td><td>RC 9.4</td><td>0,000</td><td>1,000</td><td>1,000</td><td><a href="google.com" class="coord" target="_blank">-21.5504000, -49.1594300</a></td><td><a href="google.com" class="coord" target="_blank">-21.5504000, -49.1594300</a></td></tr>
+    <tr><td>SPA 599/320</td><td>CGR 9</td><td>RC 9.4</td><td>0,000</td><td>1,470</td><td>1,470</td><td><a href="google.com" class="coord" target="_blank">-21.5504000, -49.1594300</a></td><td><a href="google.com" class="coord" target="_blank">-21.5504000, -49.1594300</a></td></tr>
+    <tr><td>SPA 626/320</td><td>CGR 9</td><td>RC 9.4</td><td>0,000</td><td>2,080</td><td>2,080</td><td><a href="google.com" class="coord" target="_blank">-21.5504000, -49.1594300</a></td><td><a href="google.com" class="coord" target="_blank">-21.5504000, -49.1594300</a></td></tr>
+    <tr><td>SPA 314/563</td><td>CGR 9</td><td>RC 9.4</td><td>0,000</td><td>0,330</td><td>0,330</td><td><a href="google.com" class="coord" target="_blank">-21.5504000, -49.1594300</a></td><td><a href="google.com" class="coord" target="_blank">-21.5504000, -49.1594300</a></td></tr>
+    <tr><td>SPA 331/563</td><td>CGR 9</td><td>RC 9.4</td><td>0,000</td><td>0,220</td><td>0,220</td><td><a href="google.com" class="coord" target="_blank">-21.5504000, -49.1594300</a></td><td><a href="google.com" class="coord" target="_blank">-21.5504000, -49.1594300</a></td></tr>
+    <tr><td>SPA 308/563</td><td>CGR 9</td><td>RC 9.4</td><td>0,000</td><td>0,570</td><td>0,570</td><td><a href="google.com" class="coord" target="_blank">-21.5504000, -49.1594300</a></td><td><a href="google.com" class="coord" target="_blank">-21.5504000, -49.1594300</a></td></tr>
+    <tr><td>SPA 129/463</td><td>CGR 9</td><td>RC 9.4</td><td>0,000</td><td>0,660</td><td>0,660</td><td><a href="google.com" class="coord" target="_blank">-21.5504000, -49.1594300</a></td><td><a href="google.com" class="coord" target="_blank">-21.5504000, -49.1594300</a></td></tr>
+    <tr><td>SPA 157/463</td><td>CGR 9</td><td>RC 9.4</td><td>0,000</td><td>0,715</td><td>0,715</td><td><a href="google.com" class="coord" target="_blank">-21.5504000, -49.1594300</a></td><td><a href="google.com" class="coord" target="_blank">-21.5504000, -49.1594300</a></td></tr>
+    <tr><td>SPA 169/463</td><td>CGR 9</td><td>RC 9.4</td><td>0,000</td><td>1,260</td><td>1,260</td><td><a href="google.com" class="coord" target="_blank">-21.5504000, -49.1594300</a></td><td><a href="google.com" class="coord" target="_blank">-21.5504000, -49.1594300</a></td></tr>
+    <tr><td>SPA 174/463</td><td>CGR 9</td><td>RC 9.4</td><td>0,000</td><td>2,200</td><td>2,200</td><td><a href="google.com" class="coord" target="_blank">-21.5504000, -49.1594300</a></td><td><a href="google.com" class="coord" target="_blank">-21.5504000, -49.1594300</a></td></tr>
+    <tr><td>SPA 181/463</td><td>CGR 9</td><td>RC 9.4</td><td>0,000</td><td>10,200</td><td>10,200</td><td><a href="google.com" class="coord" target="_blank">-21.5504000, -49.1594300</a></td><td><a href="google.com" class="coord" target="_blank">-21.5504000, -49.1594300</a></td></tr>
+    <tr><td>SPA 349/563</td><td>CGR 9</td><td>RC 9.4</td><td>0,000</td><td>2,531</td><td>2,531</td><td><a href="google.com" class="coord" target="_blank">-21.5504000, -49.1594300</a></td><td><a href="google.com" class="coord" target="_blank">-21.5504000, -49.1594300</a></td></tr>
+    <tr><td>SPA 627/320</td><td>CGR 9</td><td>RC 9.4</td><td>322,000</td><td>4,370</td><td>317,630</td><td><a href="google.com" class="coord" target="_blank">-21.5504000, -49.1594300</a></td><td><a href="google.com" class="coord" target="_blank">-21.5504000, -49.1594300</a></td></tr>
+    <tr><td>SPA 106/595</td><td>CGR 9</td><td>RC 9.4</td><td>0,000</td><td>2,450</td><td>2,450</td><td><a href="google.com" class="coord" target="_blank">-21.5504000, -49.1594300</a></td><td><a href="google.com" class="coord" target="_blank">-21.5504000, -49.1594300</a></td></tr>
+    <tr><td>SPA 111/595</td><td>CGR 9</td><td>RC 9.4</td><td>0,000</td><td>2,990</td><td>2,990</td><td><a href="google.com" class="coord" target="_blank">-21.5504000, -49.1594300</a></td><td><a href="google.com" class="coord" target="_blank">-21.5504000, -49.1594300</a></td></tr>
+    <tr><td>SPA 121/595</td><td>CGR 9</td><td>RC 9.4</td><td>0,000</td><td>1,141</td><td>1,141</td><td><a href="google.com" class="coord" target="_blank">-21.5504000, -49.1594300</a></td><td><a href="google.com" class="coord" target="_blank">-21.5504000, -49.1594300</a></td></tr>
+    <tr><td>SPA 631/320</td><td>CGR 9</td><td>RC 9.4</td><td>0,000</td><td>6,450</td><td>6,450</td><td><a href="google.com" class="coord" target="_blank">-21.5504000, -49.1594300</a></td><td><a href="google.com" class="coord" target="_blank">-21.5504000, -49.1594300</a></td></tr>
+    <tr><td>05 SPA 631/320</td><td>CGR 9</td><td>RC 9.4</td><td>0,000</td><td>4,350</td><td>4,350</td><td><a href="google.com" class="coord" target="_blank">-21.5504000, -49.1594300</a></td><td><a href="google.com" class="coord" target="_blank">-21.5504000, -49.1594300</a></td></tr>
+    <tr><td>SPA 174/463</td><td>CGR 9</td><td>RC 9.4</td><td>0,000</td><td>2,200</td><td>2,200</td><td><a href="google.com" class="coord" target="_blank">-21.5504000, -49.1594300</a></td><td><a href="google.com" class="coord" target="_blank">-21.5504000, -49.1594300</a></td></tr>
+    <tr><td>SP 557</td><td>CGR 9</td><td>RC 9.4</td><td>0,000</td><td>20,062</td><td>20,062</td><td><a href="google.com" class="coord" target="_blank">-21.5504000, -49.1594300</a></td><td><a href="google.com" class="coord" target="_blank">-21.5504000, -49.1594300</a></td></tr>
+    <tr><td>SP 561</td><td>CGR 9</td><td>RC 9.4</td><td>0,000</td><td>42,248</td><td>42,248</td><td><a href="google.com" class="coord" target="_blank">-21.5504000, -49.1594300</a></td><td><a href="google.com" class="coord" target="_blank">-21.5504000, -49.1594300</a></td></tr>
+    <tr><td>SP 563</td><td>CGR 9</td><td>RC 9.4</td><td>353,000</td><td>307,950</td><td>45,050</td><td><a href="google.com" class="coord" target="_blank">-21.5504000, -49.1594300</a></td><td><a href="google.com" class="coord" target="_blank">-21.5504000, -49.1594300</a></td></tr>
+    <tr><td>SP 463</td><td>CGR 9</td><td>RC 9.4</td><td>121,900</td><td>185,050</td><td>63,150</td><td><a href="google.com" class="coord" target="_blank">-21.5504000, -49.1594300</a></td><td><a href="google.com" class="coord" target="_blank">-21.5504000, -49.1594300</a></td></tr>
+    <tr><td>SPA 569/320</td><td>CGR 9</td><td>RC 9.4</td><td>0,000</td><td>12,940</td><td>12,940</td><td><a href="google.com" class="coord" target="_blank">-21.5504000, -49.1594300</a></td><td><a href="google.com" class="coord" target="_blank">-21.5504000, -49.1594300</a></td></tr>
+  </tbody>
+  </table>
+
+      <table id="tabelaDados5">
+    <thead>
+      <tr>
+        <th class="titulo-principal" colspan="8">CGR 9 - São José do Rio Preto - SP</th>
+      </tr>
+      <tr>
+        <th>Rodovia</th>
+        <th>CGR</th>
+        <th>Residência de Conservação</th>
+        <th>Km (inicial)</th>
+        <th>Km (final)</th>
+        <th>Extensão</th>
+        <th>Coordenada (inicial)</th>
+        <th>Coordenada (final)</th>
+      </tr>
+    </thead>
+    <tbody>
+    <!-- 320 -->
+    <tr><td>SP 320</td><td>CGR 9</td><td>SP 320</td><td>453,000</td><td>519,000</td><td>66,000</td><td><a href="google.com" class="coord" target="_blank">-21.5504000, -49.1594300</a></td><td><a href="google.com" class="coord" target="_blank">-21.5504000, -49.1594300</a></td></tr>
+    <tr><td>SP 320</td><td>CGR 9</td><td>SP 320</td><td>519,000</td><td>579,000</td><td>60,000</td><td><a href="google.com" class="coord" target="_blank">-21.5504000, -49.1594300</a></td><td><a href="google.com" class="coord" target="_blank">-21.5504000, -49.1594300</a></td></tr>
+    <tr><td>SP 320</td><td>CGR 9</td><td>SP 320</td><td>579,000</td><td>639,700</td><td>60,700</td><td><a href="google.com" class="coord" target="_blank">-21.5504000, -49.1594300</a></td><td><a href="google.com" class="coord" target="_blank">-21.5504000, -49.1594300</a></td></tr>
+  </tbody>
+  </table>
+  </div>
+    <div class="imagemcgrdiv">
+      <img src="https://www.der.sp.gov.br/WebSite/img/Institucional/logo_05.jpg" alt="Imagem Centralizada">
+      </div>
+
+<div class="AutoScripts">
+  <div class="EngineOcrContainer">
+    <div class="EngineOcr">
+      <span onclick="AlternateTo.call(this);" class="active">
+        <i class="fa-solid fa-angles-down"></i><h2>Baixar tudo</h2>
+      </span>
+      <span onclick="AlternateTo.call(this);">
+        <i class="fa-solid fa-wrench"></i><h2>Leitor de imagem Ocr</h2>
+      </span>
+    </div>
+  </div>
+  <div class="AutoScriptsPasta on">
+    <ul>
+      <li onclick="window.open('https://drive.google.com/file/d/1Adk39zoJ4SRtIdxHRRyZhV6O6w-NeZxT/view?usp=drive_link', '_blank')">
+        <i class="fa-solid fa-folder"></i><span>Engine para Suporte RDO</span><i class="fa-solid fa-download"></i>
+      </li>
+      <li onclick="window.open('https://drive.google.com/file/d/1iZxnxNUwnY2SbrrRo8CIcTmIkjrjMW2_/view?usp=drive_link', '_blank')">
+        <i class="fa-solid fa-folder"></i><span>Correção de Planilhas do Excel importadas do SAC</span><i class="fa-solid fa-download"></i>
+      </li>
+      <li onclick="window.open('https://drive.google.com/file/d/1mryAZUZRIFzpvGuCj9VxjYC4OXXOR_B0/view?usp=drive_link', '_blank')">
+        <i class="fa-solid fa-file"></i><span>Importador Interno para Excel</span><i class="fa-solid fa-download"></i>
+      </li>
+      <li onclick="window.open('https://drive.google.com/file/d/1vgjKXBtCyBV93kgaBlaiUGnyz-n3GoYJ/view?usp=drive_link', '_blank')">
+        <i class="fa-solid fa-file-excel"></i><span>Arquivo Modelo RDO</span><i class="fa-solid fa-download"></i>
+      </li>
+      <li onclick="window.open('https://drive.google.com/file/d/1ZW7uL2E4k9dAJ5ygHHdGP9x5KMwL-A_k/view?usp=drive_link', '_blank')">
+        <i class="fa-solid fa-file-code"></i><span>Engine local para Envio de Notificações</span><i class="fa-solid fa-download"></i>
+      </li>
+      <li onclick="window.open('https://drive.google.com/file/d/10JyCLe3t6pMdQXoY5YE5ku-QGmVH6g4y/view?usp=drive_link', '_blank')">
+        <i class="fa-solid fa-file-csv"></i><span>Importador Externo para Excel</span><i class="fa-solid fa-download"></i>
+      </li>
+      <li onclick="window.open('https://drive.google.com/file/d/15sylHlDCa4VVBqeIBBh6sMrm66mJeNXc/view?usp=drive_link', '_blank')">
+        <i class="fa-solid fa-file-lines"></i><span>Versão das Automatizações</span><i class="fa-solid fa-download"></i>
+      </li>
+    </ul>
+  </div>
+  <div class="PainelOcr off">
+  <div>
+    <div id="imagePreview" onclick="document.getElementById('imageInput').click()">Pré-visualização da imagem</div>
+    <button id="select-image" onclick="document.getElementById('imageInput').click()">Selecionar Foto</button>
+    <input type="file" id="imageInput" accept="image/*" style="display:none">
+  </div>
+
+  <div class="info-fields">
+    <label>Rodovia: <br><input id="rodovia"></label><i class="fa-regular fa-copy"></i><i class="fa-solid fa-circle-check"></i><br>
+    <label>Km: <br><input id="km"></label><i class="fa-regular fa-copy"></i><i class="fa-solid fa-circle-check"></i><br>
+    <label>Latitude: <br><input id="latitude"></label><i class="fa-regular fa-copy"></i><i class="fa-solid fa-circle-check"></i><br>
+    <label>Longitude: <br><input id="longitude"></label><i class="fa-regular fa-copy"></i><i class="fa-solid fa-circle-check"></i><br>
+    <label>Sentido: <br><input id="sentido"></label><i class="fa-regular fa-copy"></i><i class="fa-solid fa-circle-check"></i><br>
+    <label>Data: <br><input id="data"></label><i class="fa-regular fa-copy"></i><i class="fa-solid fa-circle-check"></i><br>
+    <label>Hora: <br><input id="hora"></label><i class="fa-regular fa-copy"></i><i class="fa-solid fa-circle-check"></i><br>
+  </div>
+  </div>
+</div>
+
+      <script src="script.js"></script>
+      </body>
+      </html>
