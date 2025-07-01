@@ -522,7 +522,7 @@
 .rcs, /* 216px */
 .suggestions-list, /* 400px */
 .search-box {
-    zoom: 0.6;
+    zoom: 0.7;
     transform-origin: top left;
 }
 }
@@ -531,7 +531,7 @@
 .rcs, /* 216px */
 .suggestions-list, /* 400px */
 .search-box /* 400px */ {
-    zoom: 0.7;
+    zoom: 0.75;
     transform-origin: top left;
 }
 
